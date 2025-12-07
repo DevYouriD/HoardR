@@ -2,13 +2,12 @@
 
 This document contains a checklist of all the cards that I like, own or would like to own. I mainly focus on _art_ cards, 
 meaning cards of the following types:
+- Full Art
+- Pokémon V / VMAX / VSTAR / V-UNION
+- Secret Rares
+- Alternate Art
+- Promo Cards
 - Full Art Trainers
-- Pokémon V
-- Pokémon VMAX / VSTAR / V-UNION
-- Secret Rares / Rainbow Rares / Gold Rares
-- Alternate Art Pokémon
-- Special Promo Cards
-- Shiny / Gold Collection Cards
 
 ---
 
