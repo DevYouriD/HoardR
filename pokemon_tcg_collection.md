@@ -43,9 +43,9 @@ Mega Charizard X ex (PFL 125)
 
 ## Where to Buy?
 **Online**  
-[Cardmarket](https://www.cardmarket.com/en/Pokemon)
-[Vinted](https://www.cardmarket.com/en/Pokemon)
-[eBay](https://www.ebay.nl/)
+[Cardmarket](https://www.cardmarket.com/en/Pokemon)  
+[Vinted](https://www.cardmarket.com/en/Pokemon)  
+[eBay](https://www.ebay.nl/)  
 [Marktplaats](https://www.marktplaats.nl/)
 
 **Offline**
