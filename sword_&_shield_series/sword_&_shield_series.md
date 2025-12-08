@@ -58,9 +58,9 @@
 ## Chilling Reign – (2021)
 |                                                Image                                                 |      Card Name      | Card Number | In Collection (✅/❌) | Price Indication |
 |:----------------------------------------------------------------------------------------------------:|:-------------------:|:-----------:|:-------------------:|:----------------:|
-|     <img src="https://den-cards.pokellector.com/320/Tornadus-V.CRE.185.39172.png" width="200"/>      |     Tornadus V      |   185/198   |          ❌          |       0,-        |
-| <img src="https://den-cards.pokellector.com/320/Galarian-Articuno-V.CRE.120.38905.png" width="200"/> | Galarian Articuno V |   170/198   |          ❌          |       0,-        |
-|  <img src="https://den-cards.pokellector.com/320/Galarian-Zapdos-V.CRE.174.38906.png" width="200"/>  |  Galarian Zapdos V  |   174/198   |          ❌          |       0,-        |
+|     <img src="https://den-cards.pokellector.com/320/Tornadus-V.CRE.185.39172.png" width="200"/>      |     Tornadus V      |   185/198   |          ❌          |       24,-       |
+| <img src="https://den-cards.pokellector.com/320/Galarian-Articuno-V.CRE.120.38905.png" width="200"/> | Galarian Articuno V |   170/198   |          ❌          |       55,-       |
+|  <img src="https://den-cards.pokellector.com/320/Galarian-Zapdos-V.CRE.174.38906.png" width="200"/>  |  Galarian Zapdos V  |   174/198   |          ❌          |       52,-       |
 | <img src="https://den-cards.pokellector.com/320/Galarian-Moltres-V.CRE.177.38907.png" width="200"/>  | Galarian Moltres V  |   177/198   |          ❌          |      167,-       |
 
 [Chilling Reign](https://www.pokellector.com/Chilling-Reign-Expansion/)
@@ -102,9 +102,9 @@
 ## Astral Radiance – (2022)
 |                                                 Image                                                  |     Card Name      | Card Number | In Collection (✅/❌) | Price Indication |
 |:------------------------------------------------------------------------------------------------------:|:------------------:|:-----------:|:-------------------:|:----------------:|
-|     <img src="https://den-cards.pokellector.com/345/Beedrill-V.SWSH10.161.43827.png" width="200"/>     |     Beedrill V     |   161/189   |          ❌          |       0,-        |
-|     <img src="https://den-cards.pokellector.com/345/Machamp-V.SWSH10.172.43838.png" width="200"/>      |     Machamp V      |   172/189   |          ❌          |       0,-        |
-| <img src="https://den-cards.pokellector.com/345/Hisuian-Sneasler-V.SWSH10.175.43840.png" width="200"/> | Hisuian Sneasler V |   175/189   |          ❌          |       0,-        |
+|     <img src="https://den-cards.pokellector.com/345/Beedrill-V.SWSH10.161.43827.png" width="200"/>     |     Beedrill V     |   161/189   |          ❌          |      41.5,-      |
+|     <img src="https://den-cards.pokellector.com/345/Machamp-V.SWSH10.172.43838.png" width="200"/>      |     Machamp V      |   172/189   |          ❌          |      136,-       |
+| <img src="https://den-cards.pokellector.com/345/Hisuian-Sneasler-V.SWSH10.175.43840.png" width="200"/> | Hisuian Sneasler V |   175/189   |          ❌          |      22.5,-      |
 
 [Astral Radiance](https://www.pokellector.com/Astral-Radiance-Expansion/)
 
@@ -123,8 +123,8 @@
 |                                              Image                                              |  Card Name  | Card Number | In Collection (✅/❌) | Price Indication |
 |:-----------------------------------------------------------------------------------------------:|:-----------:|:-----------:|:-------------------:|:----------------:|
 |   <img src="https://den-cards.pokellector.com/354/Unown-V.SWSH12.177.45541.png" width="200"/>   |   Unown V   |   177/195   |          ❌          |     19.25,-      |
-| <img src="https://den-cards.pokellector.com/354/Skuntank-V.SWSH12.181.45545.png" width="200"/>  | Skunktank V |   181/195   |          ❌          |       0,-        |
-| <img src="https://den-cards.pokellector.com/354/Regidrago-V.SWSH12.184.45548.png" width="200"/> | Regidrago V |   184/195   |          ❌          |       0,-        |
+| <img src="https://den-cards.pokellector.com/354/Skuntank-V.SWSH12.181.45545.png" width="200"/>  | Skunktank V |   181/195   |          ❌          |       8,-        |
+| <img src="https://den-cards.pokellector.com/354/Regidrago-V.SWSH12.184.45548.png" width="200"/> | Regidrago V |   184/195   |          ❌          |      18.5,-      |
 |   <img src="https://den-cards.pokellector.com/354/Lugia-V.SWSH12.186.45550.png" width="200"/>   |   Lugia V   |   186/195   |          ❌          |      384,-       |
 
 [Silver Tempest](https://www.pokellector.com/Silver-Tempest-Expansion/)
@@ -139,7 +139,7 @@
 ## Crown Zenith Galarian Gallery — (2023)
 |                                                  Image                                                  |       Card Name        | Card Number | In Collection (✅/❌) | Price Indication |
 |:-------------------------------------------------------------------------------------------------------:|:----------------------:|:-----------:|:-------------------:|:----------------:|
-|       <img src="https://den-cards.pokellector.com/365/Kricketune.GG.GG2.46501.png" width="200"/>        |       Kricketune       |     GG2     |          ❌          |       0,-        |
+|       <img src="https://den-cards.pokellector.com/365/Kricketune.GG.GG2.46501.png" width="200"/>        |       Kricketune       |     GG2     |          ❌          |       4,-        |
 |         <img src="https://den-cards.pokellector.com/365/Ditto.GG.GG22.46206.png" width="200"/>          |         Ditto          |    GG22     |          ❌          |      6.5,-       |
 |        <img src="https://den-cards.pokellector.com/365/Bibarel.GG.GG25.46207.png" width="200"/>         |        Bibarel         |    GG25     |          ❌          |       3,-        |
 |     <img src="https://den-cards.pokellector.com/365/Simisear-VSTAR.GG.GG37.46536.png" width="200"/>     |     Simisear VSTAR     |    GG37     |          ❌          |       25,-       |

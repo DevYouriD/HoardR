@@ -47,13 +47,13 @@
 |:------------------------------------------------------------------------------------------------:|:-------------:|:-----------:|:-------------------:|:----------------:|
 |   <img src="https://den-cards.pokellector.com/363/Slowpoke.SV1EN.204.47248.png" width="200"/>    |   Slowpoke    |   204/198   |          ❌          |       22,-       |
 |   <img src="https://den-cards.pokellector.com/363/Clauncher.SV1EN.205.47249.png" width="200"/>   |   Clauncher   |   205/198   |          ❌          |       5,-        |
-|    <img src="https://den-cards.pokellector.com/363/Wiglett.SV1EN.206.47250.png" width="200"/>    |    Wiglett    |   206/198   |          ❌          |       0,-        |
-|    <img src="https://den-cards.pokellector.com/363/Dondozo.SV1EN.207.46978.png" width="200"/>    |    Dondozo    |   207/198   |          ❌          |       0,-        |
-|    <img src="https://den-cards.pokellector.com/363/Drowzee.SV1EN.210.47251.png" width="200"/>    |    Drowzee    |   210/198   |          ❌          |       0,-        |
-|  <img src="https://den-cards.pokellector.com/363/Bombirdier.SV1EN.219.47257.png" width="200"/>   |  Bombirdier   |   219/198   |          ❌          |       0,-        |
-|   <img src="https://den-cards.pokellector.com/363/Kingambit.SV1EN.220.47258.png" width="200"/>   |   Kingambit   |   220/198   |          ❌          |       0,-        |
+|    <img src="https://den-cards.pokellector.com/363/Wiglett.SV1EN.206.47250.png" width="200"/>    |    Wiglett    |   206/198   |          ❌          |      9.5,-       |
+|    <img src="https://den-cards.pokellector.com/363/Dondozo.SV1EN.207.46978.png" width="200"/>    |    Dondozo    |   207/198   |          ❌          |      7.75,-      |
+|    <img src="https://den-cards.pokellector.com/363/Drowzee.SV1EN.210.47251.png" width="200"/>    |    Drowzee    |   210/198   |          ❌          |       31,-       |
+|  <img src="https://den-cards.pokellector.com/363/Bombirdier.SV1EN.219.47257.png" width="200"/>   |  Bombirdier   |   219/198   |          ❌          |       4,-        |
+|   <img src="https://den-cards.pokellector.com/363/Kingambit.SV1EN.220.47258.png" width="200"/>   |   Kingambit   |   220/198   |          ❌          |      5.75,-      |
 |    <img src="https://den-cards.pokellector.com/363/Starly.SV1EN.221.47053.png" width="200"/>     |    Starly     |   221/198   |          ❌          |       7,-        |
-| <img src="https://den-cards.pokellector.com/363/Great-Tusk-ex.SV1EN.246.46930.png" width="200"/> | Great Tusk ex |   246/198   |          ❌          |       0,-        |
+| <img src="https://den-cards.pokellector.com/363/Great-Tusk-ex.SV1EN.246.46930.png" width="200"/> | Great Tusk ex |   246/198   |          ❌          |      9.25,-      |
 |     <img src="https://den-cards.pokellector.com/363/Ralts.SV1EN.211.47252.png" width="200"/>     |     Ralts     |   211/198   |          ❌          |       27,-       |
 |    <img src="https://den-cards.pokellector.com/363/Kirlia.SV1EN.212.47253.png" width="200"/>     |    Kirlia     |   212/198   |          ❌          |       23,-       |
 | <img src="https://den-cards.pokellector.com/363/Gardevoir-ex.SV1EN.245.46935.png" width="200"/>  | Gardevoir ex  |   245/198   |          ❌          |       46,-       |
@@ -63,7 +63,7 @@
 ## Paldea Evolved — (2023)
 |                                              Image                                              |   Card Name    | Card Number | In Collection (✅/❌) | Price Indication |
 |:-----------------------------------------------------------------------------------------------:|:--------------:|:-----------:|:-------------------:|:----------------:|
-|   <img src="https://den-cards.pokellector.com/367/Heracross.PAL.194.47986.png" width="200"/>    |   Heracross    |   194/193   |          ❌          |       0,-        |
+|   <img src="https://den-cards.pokellector.com/367/Heracross.PAL.194.47986.png" width="200"/>    |   Heracross    |   194/193   |          ❌          |       19,-       |
 |    <img src="https://den-cards.pokellector.com/367/Magikarp.PAL.203.47995.png" width="200"/>    |    Magikarp    |   203/193   |          ❌          |     221.5,-      |
 |     <img src="https://den-cards.pokellector.com/367/Raichu.PAL.211.48002.png" width="200"/>     |     Raichu     |   211/193   |          ❌          |      49.5,-      |
 | <img src="https://den-cards.pokellector.com/367/Paldean-Tauros.PAL.218.48007.png" width="200"/> | Paldean Tauros |   218/193   |          ❌          |       10,-       |
@@ -104,7 +104,7 @@
 |   <img src="https://den-cards.pokellector.com/374/Nidoking.MEW.174.48641.png" width="200"/>   |   Nidoking   |   174/165   |          ❌          |       4,-        |
 |   <img src="https://den-cards.pokellector.com/374/Psyduck.MEW.175.48720.png" width="200"/>    |   Psyduck    |   175/165   |          ❌          |       23,-       |
 |  <img src="https://den-cards.pokellector.com/374/Poliwhirl.MEW.176.48713.png" width="200"/>   |  Polywhirl   |   176/165   |          ❌          |       18,-       |
-|   <img src="https://den-cards.pokellector.com/374/Machoke.MEW.177.49502.png" width="200"/>    |   Machoke    |   177/165   |          ❌          |       0,-        |
+|   <img src="https://den-cards.pokellector.com/374/Machoke.MEW.177.49502.png" width="200"/>    |   Machoke    |   177/165   |          ❌          |       11,-       |
 |   <img src="https://den-cards.pokellector.com/374/Tangela.MEW.178.49503.png" width="200"/>    |   Tangela    |   178/165   |          ❌          |       3,-        |
 |   <img src="https://den-cards.pokellector.com/374/Mr-Mime.MEW.179.49504.png" width="200"/>    |   Mr. Mime   |   179/165   |          ❌          |      7.5,-       |
 |   <img src="https://den-cards.pokellector.com/374/Omanyte.MEW.180.49505.png" width="200"/>    |   Omanyte    |   180/165   |          ❌          |      7.5,-       |
@@ -137,7 +137,7 @@
 ## Paldean Fates — (2024)
 |                                             Image                                             |  Card Name   | Card Number | In Collection (✅/❌) | Price Indication |
 |:---------------------------------------------------------------------------------------------:|:------------:|:-----------:|:-------------------:|:----------------:|
-|   <img src="https://den-cards.pokellector.com/384/Palafin.PAF.225.51657.png" width="200"/>    |   Palafin    |   225/91    |          ❌          |       0,-        |
+|   <img src="https://den-cards.pokellector.com/384/Palafin.PAF.225.51657.png" width="200"/>    |   Palafin    |   225/91    |          ❌          |       2,-        |
 |    <img src="https://den-cards.pokellector.com/384/Mew-ex.PAF.232.51655.png" width="200"/>    |    Mew ex    |   232/91    |          ❌          |     502.5,-      |
 | <img src="https://den-cards.pokellector.com/384/Gardevoir-ex.PAF.233.51726.png" width="200"/> | Gardevoir ex |   233/91    |          ❌          |     111.5,-      |
 
@@ -158,11 +158,11 @@
 ## Twilight Masquerade — (2024)
 |                                                 Image                                                  |       Card Name       | Card Number | In Collection (✅/❌) | Price Indication |
 |:------------------------------------------------------------------------------------------------------:|:---------------------:|:-----------:|:-------------------:|:----------------:|
-|        <img src="https://den-cards.pokellector.com/392/Pinsir.TWM.168.53124.png" width="200"/>         |        Pinsir         |   168/167   |          ❌          |       0,-        |
-|       <img src="https://den-cards.pokellector.com/392/Sunflora.TWM.169.53316.png" width="200"/>        |       Sunflora        |   169/167   |          ❌          |       0,-        |
-|     <img src="https://den-cards.pokellector.com/392/Poltchageist.TWM.171.53318.png" width="200"/>      |     Poltchageist      |   171/167   |          ❌          |       0,-        |
-|     <img src="https://den-cards.pokellector.com/392/Sinistcha-ex.TWM.210.53350.png" width="200"/>      |     Sinistcha ex      |   210/167   |          ❌          |       0,-        |
-|       <img src="https://den-cards.pokellector.com/392/Tatsugiri.TWM.186.52885.png" width="200"/>       |       Tatsugiri       |   186/167   |          ❌          |       0,-        |
+|        <img src="https://den-cards.pokellector.com/392/Pinsir.TWM.168.53124.png" width="200"/>         |        Pinsir         |   168/167   |          ❌          |      9.5,-       |
+|       <img src="https://den-cards.pokellector.com/392/Sunflora.TWM.169.53316.png" width="200"/>        |       Sunflora        |   169/167   |          ❌          |       5,-        |
+|     <img src="https://den-cards.pokellector.com/392/Poltchageist.TWM.171.53318.png" width="200"/>      |     Poltchageist      |   171/167   |          ❌          |       4,-        |
+|     <img src="https://den-cards.pokellector.com/392/Sinistcha-ex.TWM.210.53350.png" width="200"/>      |     Sinistcha ex      |   210/167   |          ❌          |      19.5,-      |
+|       <img src="https://den-cards.pokellector.com/392/Tatsugiri.TWM.186.52885.png" width="200"/>       |       Tatsugiri       |   186/167   |          ❌          |       20,-       |
 | <img src="https://den-cards.pokellector.com/392/Bloodmoon-Ursaluna-ex.TWM.216.53353.png" width="200"/> | Bloodmoon Ursaluna ex |   216/167   |          ❌          |       34,-       |
 
 [Twilight Masquerade](https://www.pokellector.com/Twilight-Masquerade-Expansion/)
@@ -170,11 +170,11 @@
 ## Shrouded Fable — (2024)
 |                                            Image                                            |  Card Name  | Card Number | In Collection (✅/❌) | Price Indication |
 |:-------------------------------------------------------------------------------------------:|:-----------:|:-----------:|:-------------------:|:----------------:|
-|  <img src="https://den-cards.pokellector.com/399/Tapu-Bulu.SFA.65.53860.png" width="200"/>  |  Tapu Bulu  |    65/64    |          ❌          |       0,-        |
-|  <img src="https://den-cards.pokellector.com/399/Munkidori.SFA.72.53866.png" width="200"/>  |  Munkidori  |    72/64    |          ❌          |       0,-        |
-| <img src="https://den-cards.pokellector.com/399/Fezandipiti.SFA.73.53867.png" width="200"/> | Fezandipiti |    73/64    |          ❌          |       0,-        |
-|   <img src="https://den-cards.pokellector.com/399/Okidogi.SFA.74.53868.png" width="200"/>   |   Okidogi   |    74/64    |          ❌          |       0,-        |
-|   <img src="https://den-cards.pokellector.com/399/Fraxure.SFA.77.53871.png" width="200"/>   |   Fraxure   |    77/64    |          ❌          |       0,-        |
+|  <img src="https://den-cards.pokellector.com/399/Tapu-Bulu.SFA.65.53860.png" width="200"/>  |  Tapu Bulu  |    65/64    |          ❌          |       6,-        |
+|  <img src="https://den-cards.pokellector.com/399/Munkidori.SFA.72.53866.png" width="200"/>  |  Munkidori  |    72/64    |          ❌          |       25,-       |
+| <img src="https://den-cards.pokellector.com/399/Fezandipiti.SFA.73.53867.png" width="200"/> | Fezandipiti |    73/64    |          ❌          |      7.75,-      |
+|   <img src="https://den-cards.pokellector.com/399/Okidogi.SFA.74.53868.png" width="200"/>   |   Okidogi   |    74/64    |          ❌          |       8,-        |
+|   <img src="https://den-cards.pokellector.com/399/Fraxure.SFA.77.53871.png" width="200"/>   |   Fraxure   |    77/64    |          ❌          |      8.5,-       |
 |  <img src="https://den-cards.pokellector.com/399/Houndoom.SFA.66.53709.png" width="200"/>   |  Houndoom   |    66/64    |          ❌          |       30,-       |
 |   <img src="https://den-cards.pokellector.com/399/Duskull.SFA.68.53862.png" width="200"/>   |   Duskull   |    68/64    |          ❌          |      29.5,-      |
 |  <img src="https://den-cards.pokellector.com/399/Dusclops.SFA.69.53863.png" width="200"/>   |  Dusclops   |    69/64    |          ❌          |       20,-       |
@@ -198,13 +198,13 @@
 ## Surging Sparks — (2024)
 |                                                Image                                                 |      Card Name      | Card Number | In Collection (✅/❌) | Price Indication |
 |:----------------------------------------------------------------------------------------------------:|:-------------------:|:-----------:|:-------------------:|:----------------:|
-|      <img src="https://den-cards.pokellector.com/402/Larvesta.SSP.196.54882.png" width="200"/>       |      Larvesta       |   196/250   |          ❌          |       0,-        |
-|       <img src="https://den-cards.pokellector.com/402/Spheal.SSP.199.54885.png" width="200"/>        |       Spheal        |   199/250   |          ❌          |       0,-        |
-|       <img src="https://den-cards.pokellector.com/402/Mesprit.SSP.204.54889.png" width="200"/>       |       Mesprit       |   204/250   |          ❌          |       0,-        |
+|      <img src="https://den-cards.pokellector.com/402/Larvesta.SSP.196.54882.png" width="200"/>       |      Larvesta       |   196/250   |          ❌          |       3,-        |
+|       <img src="https://den-cards.pokellector.com/402/Spheal.SSP.199.54885.png" width="200"/>        |       Spheal        |   199/250   |          ❌          |      5.5,-       |
+|       <img src="https://den-cards.pokellector.com/402/Mesprit.SSP.204.54889.png" width="200"/>       |       Mesprit       |   204/250   |          ❌          |       9,-        |
 |      <img src="https://den-cards.pokellector.com/402/Skarmory.SSP.209.54894.png" width="200"/>       |      Skarmory       |   209/250   |          ❌          |       8,-        |
-| <img src="https://den-cards.pokellector.com/402/Alolan-Exeggutor-ex.SSP.242.54926.png" width="200"/> | Alolan Exeggutor ex |   242/250   |          ❌          |       0,-        |
-|      <img src="https://den-cards.pokellector.com/402/Exeggcute.SV8.192.54520.png" width="200"/>      |      Exeggcute      |   192/250   |          ❌          |       0,-        |
-| <img src="https://den-cards.pokellector.com/402/Castform-Sunny-Form.SSP.195.54881.png" width="200"/> | Castform Sunny Form |   195/250   |          ❌          |       0,-        |
+| <img src="https://den-cards.pokellector.com/402/Alolan-Exeggutor-ex.SSP.242.54926.png" width="200"/> | Alolan Exeggutor ex |   242/250   |          ❌          |       27,-       |
+|      <img src="https://den-cards.pokellector.com/402/Exeggcute.SV8.192.54520.png" width="200"/>      |      Exeggcute      |   192/250   |          ❌          |       5,-        |
+| <img src="https://den-cards.pokellector.com/402/Castform-Sunny-Form.SSP.195.54881.png" width="200"/> | Castform Sunny Form |   195/250   |          ❌          |      5.5,-       |
 |       <img src="https://den-cards.pokellector.com/402/Slakoth.SSP.212.54897.png" width="200"/>       |       Slakoth       |   212/250   |          ✅          |                  |
 |      <img src="https://den-cards.pokellector.com/402/Durant-ex.SSP.236.54921.png" width="200"/>      |       Durant        |   236/250   |          ❌          |       20,-       |
 |     <img src="https://den-cards.pokellector.com/402/Milotic-ex.SSP.237.54922.png" width="200"/>      |     Milotic ex      |   237/250   |          ❌          |      90.5,-      |
@@ -219,10 +219,10 @@
 ## Prismatic Evolutions — (2025)
 |                                                 Image                                                  |       Card Name       | Card Number | In Collection (✅/❌) | Price Indication |
 |:------------------------------------------------------------------------------------------------------:|:---------------------:|:-----------:|:-------------------:|:----------------:|
-|    <img src="https://den-cards.pokellector.com/407/Iron-Valiant-ex.PRE.157.55708.png" width="200"/>    |    Iron Valiant ex    |   157/131   |          ❌          |       0,-        |
-|    <img src="https://den-cards.pokellector.com/407/Sandy-Shocks-ex.PRE.159.55710.png" width="200"/>    |    Sandy Shocks ex    |   159/131   |          ❌          |       0,-        |
-|    <img src="https://den-cards.pokellector.com/407/Roaring-Moon-ex.PRE.162.55513.png" width="200"/>    |    Roaring Moon ex    |   162/131   |          ❌          |       0,-        |
-|    <img src="https://den-cards.pokellector.com/407/Raging-Bolt-ex.PRE.166.55713.png" width="200"/>     |    Raging Bolt ex     |   166/131   |          ❌          |       0,-        |
+|    <img src="https://den-cards.pokellector.com/407/Iron-Valiant-ex.PRE.157.55708.png" width="200"/>    |    Iron Valiant ex    |   157/131   |          ❌          |       42,-       |
+|    <img src="https://den-cards.pokellector.com/407/Sandy-Shocks-ex.PRE.159.55710.png" width="200"/>    |    Sandy Shocks ex    |   159/131   |          ❌          |       25,-       |
+|    <img src="https://den-cards.pokellector.com/407/Roaring-Moon-ex.PRE.162.55513.png" width="200"/>    |    Roaring Moon ex    |   162/131   |          ❌          |     181.5,-      |
+|    <img src="https://den-cards.pokellector.com/407/Raging-Bolt-ex.PRE.166.55713.png" width="200"/>     |    Raging Bolt ex     |   166/131   |          ❌          |       70,-       |
 | <img src="https://den-cards.pokellector.com/407/Bloodmoon-Ursaluna-ex.PRE.168.55498.png" width="200"/> | Bloodmoon Ursaluna ex |   168/131   |          ❌          |       64,-       |
 
 [Prismatic Evolutions](https://www.pokellector.com/Prismatic-Evolutions-Expansion/)
