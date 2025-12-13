@@ -137,7 +137,7 @@
 ## Paldean Fates — (2024)
 |                                             Image                                             |  Card Name   | Card Number | In Collection (✅/❌) | Price Indication |
 |:---------------------------------------------------------------------------------------------:|:------------:|:-----------:|:-------------------:|:----------------:|
-|   <img src="https://den-cards.pokellector.com/384/Palafin.PAF.225.51657.png" width="200"/>    |   Palafin    |   225/91    |          ❌          |       2,-        |
+|   <img src="https://den-cards.pokellector.com/384/Palafin.PAF.225.51657.png" width="200"/>    |   Palafin    |   225/91    |          ✅          |                  |
 |    <img src="https://den-cards.pokellector.com/384/Mew-ex.PAF.232.51655.png" width="200"/>    |    Mew ex    |   232/91    |          ❌          |     502.5,-      |
 | <img src="https://den-cards.pokellector.com/384/Gardevoir-ex.PAF.233.51726.png" width="200"/> | Gardevoir ex |   233/91    |          ❌          |     111.5,-      |
 
