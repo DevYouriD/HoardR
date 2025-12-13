@@ -11,17 +11,18 @@
 ---
 
 ## Mega Evolution Base Set – 2025
-|                                            Image                                            | Card Name  | Card Number | In Collection (✅/❌) | Price Indication |
-|:-------------------------------------------------------------------------------------------:|:----------:|:-----------:|:-------------------:|:----------------:|
-| <img src="https://den-cards.pokellector.com/422/Bulbasaur.MEG.133.59392.png" width="200"/>  | Bulbasaur  |   133/132   |          ❌          |       19,-       |
-|  <img src="https://den-cards.pokellector.com/422/Ivysaur.MEG.134.59393.png" width="200"/>   |  Ivysaur   |   134/132   |          ❌          |       20,-       |
-| <img src="https://den-cards.pokellector.com/422/Exeggutor.MEG.135.59394.png" width="200"/>  | Exeggutor  |   135/132   |          ❌          |       6,-        |
-|  <img src="https://den-cards.pokellector.com/422/Shuckle.MEG.136.59395.png" width="200"/>   |  Shuckle   |   136/132   |          ❌          |      6.5,-       |
-|  <img src="https://den-cards.pokellector.com/422/Ninjask.MEG.137.59396.png" width="200"/>   |  Ninjask   |   137/132   |          ❌          |       5,-        |
-|  <img src="https://den-cards.pokellector.com/422/Shedinja.MEG.144.59403.png" width="200"/>  |  Shedinja  |   144/132   |          ❌          |      3.5,-       |
-| <img src="https://den-cards.pokellector.com/422/Houndstone.MEG.145.59404.png" width="200"/> | Houndstone |   145/132   |          ❌          |       4,-        |
-| <img src="https://den-cards.pokellector.com/422/Spiritomb.MEG.148.59407.png" width="200"/>  | Spiritomb  |   148/132   |          ❌          |      3.5,-       |
-|  <img src="https://den-cards.pokellector.com/422/Steelix.MEG.150.59409.png" width="200"/>   |  Steelix   |   150/132   |          ❌          |      9.75,-      |
+|                                               Image                                               |    Card Name     | Card Number | In Collection (✅/❌) | Price Indication |
+|:-------------------------------------------------------------------------------------------------:|:----------------:|:-----------:|:-------------------:|:----------------:|
+|    <img src="https://den-cards.pokellector.com/422/Bulbasaur.MEG.133.59392.png" width="200"/>     |    Bulbasaur     |   133/132   |          ❌          |       19,-       |
+|     <img src="https://den-cards.pokellector.com/422/Ivysaur.MEG.134.59393.png" width="200"/>      |     Ivysaur      |   134/132   |          ❌          |       20,-       |
+| <img src="https://den-cards.pokellector.com/422/Mega-Venusaur-ex.MEP.177.59167.png" width="200"/> | Mega Venusaur ex |   177/132   |          ❌          |       83,-       |
+|    <img src="https://den-cards.pokellector.com/422/Exeggutor.MEG.135.59394.png" width="200"/>     |    Exeggutor     |   135/132   |          ❌          |       6,-        |
+|     <img src="https://den-cards.pokellector.com/422/Shuckle.MEG.136.59395.png" width="200"/>      |     Shuckle      |   136/132   |          ❌          |      6.5,-       |
+|     <img src="https://den-cards.pokellector.com/422/Ninjask.MEG.137.59396.png" width="200"/>      |     Ninjask      |   137/132   |          ❌          |       5,-        |
+|     <img src="https://den-cards.pokellector.com/422/Shedinja.MEG.144.59403.png" width="200"/>     |     Shedinja     |   144/132   |          ❌          |      3.5,-       |
+|    <img src="https://den-cards.pokellector.com/422/Houndstone.MEG.145.59404.png" width="200"/>    |    Houndstone    |   145/132   |          ❌          |       4,-        |
+|    <img src="https://den-cards.pokellector.com/422/Spiritomb.MEG.148.59407.png" width="200"/>     |    Spiritomb     |   148/132   |          ❌          |      3.5,-       |
+|     <img src="https://den-cards.pokellector.com/422/Steelix.MEG.150.59409.png" width="200"/>      |     Steelix      |   150/132   |          ❌          |      9.75,-      |
 
 [Mega Evolution Base Set](https://www.pokellector.com/Mega-Evolution-Expansion/)
 
