@@ -1,0 +1,53 @@
+type Card {
+    id: ID!
+    name: String!
+    number: Int!
+    collected: Boolean!
+    price: Float!
+}
+
+type Collection {
+  id: ID!
+  name: String!
+  cards: [Card!]!
+}
+
+type Set {
+  id: ID!
+  name: String!
+  collections: [Collection!]!
+}
+
+type Query {
+    findSetById(id: ID): Set
+    findAllSets: [Set]!
+}
+
+input CardInput {
+  name: String!
+  number: Int!
+  collected: Boolean!
+  price: Float!
+}
+
+input CollectionInput {
+  name: String!
+}
+
+input SetInput {
+  name: String!
+}
+
+type Mutation {
+    createSet(input: SetInput!): Set!
+    updateSet(id: ID!, name: String!): Set!
+    deleteSet(id: ID!): Boolean!
+
+    addCollectionToSet(setId: ID!, input: CollectionInput!): Collection!
+    updateCollection(setId: ID!, collectionId: ID!, name: String!): Collection!
+    deleteCollection(setId: ID!, collectionId: ID!): Boolean!
+
+    addCardToCollection(setId: ID!, collectionId: ID!, input: CardInput!): Card!
+    updateCard(setId: ID!, collectionId: ID!, cardId: ID!, name: String, number: Int, collected: Boolean, price: Float): Card!
+    deleteCard(setId: ID!, collectionId: ID!, cardId: ID!): Boolean!
+}
