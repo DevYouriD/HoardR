@@ -10,49 +10,38 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 @ControllerAdvice
 public class GraphQLExceptionHandler {
 
-    // Propagates custom exception
-    @GraphQlExceptionHandler(SetNotFoundException.class)
-    public GraphQLError handleSetNotFound(RuntimeException ex, DataFetchingEnvironment env) {
+    @GraphQlExceptionHandler(NotFoundException.class)
+    public GraphQLError handleNotFound(NotFoundException ex, DataFetchingEnvironment env) {
         return GraphqlErrorBuilder.newError(env)
                 .message(ex.getMessage())
                 .errorType(ErrorType.NOT_FOUND)
                 .build();
     }
 
-    @GraphQlExceptionHandler(CollectionNotFoundException.class)
-    public GraphQLError handleCollectionNotFound(RuntimeException ex, DataFetchingEnvironment env) {
-        return GraphqlErrorBuilder.newError(env)
-                .message(ex.getMessage())
-                .errorType(ErrorType.NOT_FOUND)
-                .build();
-    }
-
-    @GraphQlExceptionHandler(CardNotFoundException.class)
-    public GraphQLError handleCardNotFound(RuntimeException ex, DataFetchingEnvironment env) {
-        return GraphqlErrorBuilder.newError(env)
-                .message(ex.getMessage())
-                .errorType(ErrorType.NOT_FOUND)
-                .build();
-    }
-
-    // Custom Exception
-    public static class SetNotFoundException extends RuntimeException {
-        public SetNotFoundException(String id) {
-            super("Set not found");
+    // Not Found Super Class
+    public abstract static class NotFoundException extends RuntimeException {
+        protected NotFoundException(String message) {
+            super(message);
         }
     }
 
-    // Custom Exception
-    public static class CollectionNotFoundException extends RuntimeException {
-        public CollectionNotFoundException(String id) {
-            super("Set not found");
+    // Specified Not Found Child Classes
+
+    public static class SeriesNotFoundException extends NotFoundException {
+        public SeriesNotFoundException(String id) {
+            super("Series not found: " + id);
         }
     }
 
-    // Custom Exception
-    public static class CardNotFoundException extends RuntimeException {
+    public static class ExpansionSetNotFoundException extends NotFoundException {
+        public ExpansionSetNotFoundException(String id) {
+            super("Expansion Set not found: " + id);
+        }
+    }
+
+    public static class CardNotFoundException extends NotFoundException {
         public CardNotFoundException(String id) {
-            super("Card not found");
+            super("Card not found: " + id);
         }
     }
 }

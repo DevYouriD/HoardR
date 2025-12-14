@@ -6,21 +6,21 @@ type Card {
     price: Float!
 }
 
-type Collection {
+type ExpansionSet {
   id: ID!
   name: String!
   cards: [Card!]!
 }
 
-type Set {
+type Series {
   id: ID!
   name: String!
-  collections: [Collection!]!
+  expansionSets: [ExpansionSet!]!
 }
 
 type Query {
-    findSetById(id: ID): Set
-    findAllSets: [Set]!
+    findSeriesById(id: ID): Series
+    findAllSeries: [Series]!
 }
 
 input CardInput {
@@ -30,24 +30,24 @@ input CardInput {
   price: Float!
 }
 
-input CollectionInput {
+input ExpansionSetInput {
   name: String!
 }
 
-input SetInput {
+input SeriesInput {
   name: String!
 }
 
 type Mutation {
-    createSet(input: SetInput!): Set!
-    updateSet(id: ID!, name: String!): Set!
-    deleteSet(id: ID!): Boolean!
+    createSeries(input: SeriesInput!): Series!
+    updateSeries(id: ID!, name: String!): Series!
+    deleteSeries(id: ID!): Boolean!
 
-    addCollectionToSet(setId: ID!, input: CollectionInput!): Collection!
-    updateCollection(setId: ID!, collectionId: ID!, name: String!): Collection!
-    deleteCollection(setId: ID!, collectionId: ID!): Boolean!
+    addExpansionSetToSeries(setId: ID!, input: ExpansionSetInput!): ExpansionSet!
+    updateExpansionSet(setId: ID!, expansionSetId: ID!, name: String!): ExpansionSet!
+    deleteExpansionSet(setId: ID!, expansionSetId: ID!): Boolean!
 
-    addCardToCollection(setId: ID!, collectionId: ID!, input: CardInput!): Card!
-    updateCard(setId: ID!, collectionId: ID!, cardId: ID!, name: String, number: Int, collected: Boolean, price: Float): Card!
-    deleteCard(setId: ID!, collectionId: ID!, cardId: ID!): Boolean!
+    addCardToExpansionSet(setId: ID!, expansionSetId: ID!, input: CardInput!): Card!
+    updateCard(setId: ID!, expansionSetId: ID!, cardId: ID!, name: String, number: Int, collected: Boolean, price: Float): Card!
+    deleteCard(setId: ID!, expansionSetId: ID!, cardId: ID!): Boolean!
 }

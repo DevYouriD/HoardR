@@ -10,12 +10,12 @@ import java.util.List;
 
 @Getter @Setter
 @AllArgsConstructor
-@Document(collection = "collections")
-public class Collection {
+@Document(collection = "series")
+public class Series {
 
     @Id
     private String id;
     private String name;
-    private List<Card> cards;
+    private List<ExpansionSet> expansionSets;
 
 }

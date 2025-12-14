@@ -4,20 +4,18 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.UUID;
 
 @Getter @Setter
 @Builder
-public class Card {
+public class ExpansionSet {
 
     private String id;
-//    private Blob face;
     private String name;
-    private int number;
-    private boolean collected;
-    private float price;
+    private List<Card> cards;
 
-    public Card() {
+    public ExpansionSet() {
         this.id = UUID.randomUUID().toString();
     }
 }

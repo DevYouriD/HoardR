@@ -6,6 +6,6 @@ import lombok.Setter;
 
 @Getter @Setter
 @NoArgsConstructor
-public class SetDto {
+public class ExpansionSetDto {
     private String name;
 }

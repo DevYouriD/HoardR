@@ -1,70 +1,133 @@
-# Pokemon TCG Collection Notes
+# HoardR Collection Tracker
 
-This document contains a checklist of all the cards that I like, own or would like to own. I mainly focus on _art_ cards, 
-meaning cards of the following types:
-- Full Art
-- Pokémon V / VMAX / VSTAR / V-UNION
-- Secret Rares
-- Alternate Art
-- Promo Cards
-- Full Art Trainers
+ToDo:
+- Add registration / login / authenticated user pages
+- Add proper data models
+- Create test data
+- Implement MongoDb
+- Protect endpoints with spring security (JWT)
 
----
+GraphQl Crud tutorial: https://www.youtube.com/watch?v=AgSO3rcSuHE  
+Spring GraphQl Setup tutorial: https://spring.io/guides/gs/graphql-server  
 
-## Table of Contents
-- [Sword & Shield Series](sword_%26_shield_series/sword_%26_shield_series.md)
-- [Scarlet & Violet Series](scarlet_%26_violet_series/scarlet_%26_violet_series.md)
-- [Mega Evolution Series](mega_evolution_series/mega_evolution_series.md)
-
----
-
-## How to get a price indication for singles?
-There are a few sites where we can get a fairly accurate price indication. When pricing cards, it's important
-not to look at any sale price, but at the prices cards are actually getting sold for on platforms like ebay.
-
-The following sites show us these sales and link directly to the source:
-
-[Pricecharting](https://www.pricecharting.com/)
-
-Example Search: 
+MongoDB UI:
 ```text
-Mega Charizard X ex #125/094
+http://localhost:8081
 ```
 
-[Cardmarket](https://www.cardmarket.com/en/Pokemon)  
-
-Example Search:
+GraphQl Playground:
 ```text
-Mega Charizard X ex (PFL 125)
+http://localhost:8080/graphiql
 ```
 
----
-
-## Where to Buy?
-**Online**  
-[Cardmarket](https://www.cardmarket.com/en/Pokemon)  
-[Vinted](https://www.cardmarket.com/en/Pokemon)  
-[eBay](https://www.ebay.nl/)  
-[Marktplaats](https://www.marktplaats.nl/)
-
-**Offline**
-- Conferences
-- Card Shops
+[Example Queries (CRUD Operations)](GraphQL_Queries.md)
 
 ---
 
-### OTHER LINKS
-[List of Sets](https://www.pokellector.com/sets)  
-[Pokemon Full Art list](www.zardhunt.com/s/stories/full-list-of-pokemon-alternate-art-cards#YOuHqg)  
-[Trainer Full Art list](https://docs.google.com/document/d/199uU2nGfnPt5WG2o2QvmSIxic6PYLPCU/edit)  
-[All Art Carts Spreadsheet](https://docs.google.com/spreadsheets/d/1iYtq1A1RZhYMmWoawIVkVGMZxo3CLu_nkCpzSBpoJFs/edit?gid=0#gid=0)  
+## Project Baseline
+Initial application plan:
 
-<!-- 
+### **Tech Stack**
+- Spring Boot
+- GraphQL
+- MongoDB
+- Thymeleaf frontend
+- JWT-protected endpoints (static token)
 
-Table Template
+### **Initial Goal**
+- Convert Pokémon card markdown expansionSet into dedicated application
+- CRUD operations for sets and cards
+- Track which cards you own
+- Display/manage price indications
 
-| Image | Card Name | Card Number | In Collection (✅/❌) |
-| :----: | :----: | :----: | :----: |
-| [Image] | Rayquaza VMAX | 218/203 | ❌ |
+---
 
- -->
+## Expansion Ideas
+
+### **1. Data Import & Management**
+- Parse and import your existing markdown expansionSet
+- Admin-only endpoint to upload/sync collections
+- GraphQL mutations for manual card editing
+- Optionally maintain multiple collections or profiles
+
+### **2. Frontend Application (Optional but Valuable)**
+- Web UI using React or Next.js
+- Apollo Client for GraphQL operations
+- Card gallery with:
+    - Search
+    - Filters (series, rarity, illustrator, price)
+    - Collected/missing badges
+- Set overview pages
+
+### **3. Price Tracking Features**
+- Scheduled background job to check price updates
+- API client or scraper for Pokellector / TCGPlayer / Cardmarket
+- Store historical price data (time-series in Mongo)
+- Visual price trends (↑ / ↓)
+
+### **4. Collection Analytics**
+- Total expansionSet value
+- Total value of missing cards
+- Completion percentage per series or series
+- Stats by:
+    - Illustrator
+    - Rarity
+    - Pokémon type
+- “Top 10 most expensive missing cards.”
+
+### **5. Image Handling Enhancements**
+- Cache external images locally or in S3
+- Automatic thumbnail generation
+- Fallback images if a URL breaks
+- Optional offline mode for images
+
+### **6. Search & Filtering Tools**
+- Full-text search (MongoDB text index)
+- Filters for:
+    - Illustrator
+    - Set
+    - Rarity
+    - Price range
+    - Collected / missing
+- Dedicated “cards I still need” query/page
+
+### **7. Mobile or Desktop Client (Optional)**
+- React Native mobile app
+- Barcode/QR scanning to update expansionSet
+- Electron desktop app for a standalone PC client
+
+### **8. Security & Deployment**
+- Static JWT validation for all API requests
+- Dockerized backend + MongoDB
+- Deployment options:
+    - Fly.io
+    - Render
+    - DigitalOcean
+    - Home server / Raspberry Pi
+
+### **9. Quality of Life Improvements**
+- Export expansionSet to:
+    - Markdown
+    - JSON
+    - CSV
+- Auto-generate markdown tables like your original format
+- Notifications when card price crosses thresholds
+- Illustrator details page with statistics
+
+---
+
+## Ultimate Scope Summary
+A personal, feature-rich expansionSet tracker that can grow into:
+
+- A GraphQL-driven card database
+- Automated price tracker
+- Beautiful gallery UI
+- Analytics + insights
+- Optional mobile access
+- Secure private API
+
+Let me know if you'd like:
+- A MongoDB schema
+- A GraphQL schema
+- A sample Spring Boot project structure
+- Or code scaffolding to get started!

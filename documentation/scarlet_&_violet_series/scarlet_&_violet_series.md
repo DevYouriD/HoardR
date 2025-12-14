@@ -4,7 +4,7 @@
 
 ## Table of Contents
 - [Scarlet & Violet Promos](#scarlet--violet-promos--2023)
-- [Scarlet & Violet Base Set](#scarlet--violet-base-set--2023)
+- [Scarlet & Violet Base Set](#scarlet--violet-base-series--2023)
 - [Paldea Evolved](#paldea-evolved--2023)
 - [Obsidian Flames](#obsidian-flames--2023)
 - [151](#151--2023)

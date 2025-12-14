@@ -3,7 +3,7 @@
 ---
 
 ## Table of Contents
-- [Mega Evolution Base Set](#mega-evolution-base-set--2025)
+- [Mega Evolution Base Set](#mega-evolution-base-series--2025)
 - [Mega Evolution Black Star Promos](#mega-evolution-black-star-promos--2025)
 - [Phantasmal Flames](#phantasmal-flames--2025)
 - [Ascended Heroes](#ascended-heroes--2025)

@@ -6,6 +6,6 @@ import lombok.Setter;
 
 @Getter @Setter
 @NoArgsConstructor
-public class CollectionDto {
+public class SeriesDto {
     private String name;
 }

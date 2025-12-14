@@ -4,7 +4,7 @@
 
 ## Table of Contents
 - [Sword & Shield Promos](#sword--shield-promos--2020)
-- [Sword & Shield Base Set](#sword--shield-base-set--2020)
+- [Sword & Shield Base Set](#sword--shield-base-series--2020)
 - [Rebel Clash](#rebel-clash--2020)
 - [Darkness Ablaze](#darkness-ablaze--2020)
 - [Vivid Voltage](#vivid-voltage--2020)
