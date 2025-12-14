@@ -4,10 +4,12 @@
 Find one
 ```text
 query getSingleCard {
-  cardById(id: "2") {
+  findCardById(id: "1") {
     id
     name
     number
+    collected
+    price
   }
 }
 ```
@@ -15,10 +17,12 @@ query getSingleCard {
 Find all
 ```text
 query getListOfCards {
-  findAll {
+  findAllCards {
     id
     name
     number
+    collected
+    price
   }
 }
 ```
@@ -26,10 +30,12 @@ query getListOfCards {
 Create
 ```text
 mutation createCard {
-  create(name: "Harry", number: 5) {
+  createCard(input: { name: "Snorlax", number: 33, collected: true, price: 54.75 }) {
     id
     name
     number
+    collected
+    price
   }
 }
 ```
@@ -37,10 +43,12 @@ mutation createCard {
 Update
 ```text
 mutation updateCard {
-  update(id: "2", name: "Frits", number: 999) {
+  updateCard(id: "69381e8d171471bdd6f6d53d", name: "Charmander", number: 1) {
     id
     name
     number
+    collected
+    price
   }
 }
 ```
@@ -48,10 +56,12 @@ mutation updateCard {
 Delete
 ```text
 mutation deleteCard {
-  delete(id: 1) {
+  deleteCard(id: "69381e8d171471bdd6f6d53d") {
     id
     name
     number
+    collected
+    price
   }
 }
 ```

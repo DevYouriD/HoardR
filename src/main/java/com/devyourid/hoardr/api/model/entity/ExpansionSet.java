@@ -15,7 +15,4 @@ public class ExpansionSet {
     private String name;
     private List<Card> cards;
 
-    public ExpansionSet() {
-        this.id = UUID.randomUUID().toString();
-    }
 }

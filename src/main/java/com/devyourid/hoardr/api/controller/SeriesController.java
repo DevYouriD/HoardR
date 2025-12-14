@@ -6,6 +6,8 @@ import com.devyourid.hoardr.api.model.dto.SeriesDto;
 import com.devyourid.hoardr.api.model.entity.Card;
 import com.devyourid.hoardr.api.model.entity.ExpansionSet;
 import com.devyourid.hoardr.api.model.entity.Series;
+import com.devyourid.hoardr.api.service.CardService;
+import com.devyourid.hoardr.api.service.ExpansionSetService;
 import com.devyourid.hoardr.api.service.SeriesService;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,54 +25,74 @@ import java.util.List;
 public class SeriesController {
 
     private final SeriesService seriesService;
+    private final ExpansionSetService expansionSetService;
+    private final CardService cardService;
 
-    /* ---------- Queries ---------- */
+    // ---------- SERIES ---------- //
+
+    // CREATE
+
+    @MutationMapping
+    public Series createSeries(@Argument("input") SeriesDto input) {
+        return seriesService.createSeries(input.getName());
+    }
 
     @QueryMapping
     public Series findSeriesById(@Argument String id) {
-        return seriesService.findExpansionSetById(id);
+        return seriesService.findSeriesById(id);
     }
+
+    // READ
 
     @QueryMapping
     public List<Series> findAllSeries() {
         return seriesService.findAllSeries();
     }
 
-    // ---------- Series ---------- */
-
-    @MutationMapping
-    public Series createSeries(@Argument("seriesInput") SeriesDto input) {
-        return seriesService.createSeries(input.getName());
-    }
+    // UPDATE
 
     @MutationMapping
     public Series updateSeries(@Argument String id, @Argument String name) {
         return seriesService.updateSeries(id, name);
     }
 
+    // DELETE
+
     @MutationMapping
-    public Boolean deleteSeries(@Argument String id) {
+    public String deleteSeries(@Argument String id) {
         return seriesService.deleteSeries(id);
     }
 
-    /* ---------- Expansion Sets ---------- */
+    // ---------- EXPANSION SETS ---------- //
+
+    // CREATE
 
     @MutationMapping
-    public ExpansionSet addExpansionSetToSeries(@Argument String seriesId, @Argument("expansionSetInput") ExpansionSetDto input) {
-        return seriesService.addExpansionSet(seriesId, input.getName());
+    public ExpansionSet addExpansionSetToSeries(@Argument String seriesId, @Argument("input") ExpansionSetDto input) {
+        return expansionSetService.addExpansionSet(seriesId, input.getName());
     }
+
+    // UPDATE
+
+    //TODO: Update ExpansionsSet
+
+    // DELETE
 
     @MutationMapping
-    public Boolean deleteExpansionSet(@Argument String seriesId, @Argument String expansionSetId) {
-        return seriesService.deleteExpansionSet(seriesId, expansionSetId);
+    public String deleteExpansionSet(@Argument String seriesId, @Argument String expansionSetId) {
+        return expansionSetService.deleteExpansionSet(seriesId, expansionSetId);
     }
 
-    /* ---------- Cards ---------- */
+    // ---------- CARDS ---------- //
+
+    // CREATE
 
     @MutationMapping
-    public Card addCardToExpansionSet(@Argument String seriesId, @Argument String expansionSetId, @Argument("cardInput") CardDto input) {
-        return seriesService.addCard(seriesId, expansionSetId, input);
+    public Card addCardToExpansionSet(@Argument String seriesId, @Argument String expansionSetId, @Argument("input") CardDto input) {
+        return cardService.addCard(seriesId, expansionSetId, input);
     }
+
+    // UPDATE
 
     @MutationMapping
     public Card updateCard(
@@ -82,11 +104,13 @@ public class SeriesController {
             @Argument Boolean collected,
             @Argument Float price
     ) {
-        return seriesService.updateCard(seriesId, expansionSetId, cardId, name, number, collected, price);
+        return cardService.updateCard(seriesId, expansionSetId, cardId, name, number, collected, price);
     }
 
+    // DELETE
+
     @MutationMapping
-    public Boolean deleteCard(@Argument String seriesId, @Argument String expansionSetId, @Argument String cardId) {
-        return seriesService.deleteCard(seriesId, expansionSetId, cardId);
+    public String deleteCard(@Argument String seriesId, @Argument String expansionSetId, @Argument String cardId) {
+        return cardService.deleteCard(seriesId, expansionSetId, cardId);
     }
 }
