@@ -37,12 +37,12 @@ public class SeriesController {
         return seriesService.createSeries(input.getName());
     }
 
+    // READ
+
     @QueryMapping
     public Series findSeriesById(@Argument String id) {
         return seriesService.findSeriesById(id);
     }
-
-    // READ
 
     @QueryMapping
     public List<Series> findAllSeries() {
@@ -75,6 +75,10 @@ public class SeriesController {
     // UPDATE
 
     //TODO: Update ExpansionsSet
+    @MutationMapping
+    public ExpansionSet updateExpansionSet(@Argument String seriesId, @Argument String expansionSetId, @Argument String name) {
+        return expansionSetService.updateExpansionSet(seriesId, expansionSetId, name);
+    }
 
     // DELETE
 
