@@ -1,4 +1,4 @@
-package com.devyourid.hoardr.api.controller;
+package com.devyourid.hoardr.api.controller.api;
 
 import com.devyourid.hoardr.api.model.dto.CardDto;
 import com.devyourid.hoardr.api.model.dto.ExpansionSetDto;
@@ -34,7 +34,7 @@ public class SeriesController {
 
     @MutationMapping
     public Series createSeries(@Argument("input") SeriesDto input) {
-        return seriesService.createSeries(input.getName());
+        return seriesService.createSeries(input.getName(), input.getIcon());
     }
 
     // READ
@@ -52,8 +52,8 @@ public class SeriesController {
     // UPDATE
 
     @MutationMapping
-    public Series updateSeries(@Argument String id, @Argument String name) {
-        return seriesService.updateSeries(id, name);
+    public Series updateSeries(@Argument String id, @Argument String name, @Argument String icon) {
+        return seriesService.updateSeries(id, name, icon);
     }
 
     // DELETE

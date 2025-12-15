@@ -2,16 +2,9 @@ spring:
   application:
     name: hoardr
 
-  data:
-    mongodb:
-      host: localhost
-      port: 27017
-      database: mydb
-      username: admin
-      password: root
-      authentication-database: admin
-
-#      uri: mongodb://localhost:27017/mydb
+#    data:
+#      mongodb:
+#        uri: mongodb://root:root@localhost:27017/cardcollectiondb?authSource=admin
 
   graphql:
     graphiql:

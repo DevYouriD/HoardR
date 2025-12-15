@@ -31,9 +31,10 @@ public class CardService {
 
         Card card = Card.builder()
                 .id(UUID.randomUUID().toString())
+                .face("https://den-cards.pokellector.com/325/Rayquaza-VMAX.SWSH7.218.40102.png")
                 .name(input.getName())
                 .number(input.getNumber())
-                .collected(input.isCollected())
+                .collected(false)
                 .price(input.getPrice())
                 .build();
 

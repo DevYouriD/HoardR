@@ -8,4 +8,5 @@ import lombok.Setter;
 @NoArgsConstructor
 public class SeriesDto {
     private String name;
+    private String icon;
 }

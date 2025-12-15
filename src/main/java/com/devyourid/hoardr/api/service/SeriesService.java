@@ -19,8 +19,8 @@ public class SeriesService {
 
     private final SeriesRepository seriesRepository;
 
-    public Series createSeries(String name) {
-        return seriesRepository.save(new Series(null, name, new ArrayList<>()));
+    public Series createSeries(String name, String icon) {
+        return seriesRepository.save(new Series(null , name, icon ,new ArrayList<>()));
     }
 
     public List<Series> findAllSeries() {
@@ -32,9 +32,10 @@ public class SeriesService {
                 .orElseThrow(() -> new GraphQLExceptionHandler.SeriesNotFoundException(id));
     }
 
-    public Series updateSeries(String id, String name) {
+    public Series updateSeries(String id, String name, String icon) {
         Series series = findSeriesById(id);
         series.setName(name);
+        series.setIcon(icon);
         return seriesRepository.save(series);
     }
 
