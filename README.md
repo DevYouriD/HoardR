@@ -7,6 +7,14 @@ ToDo:
 - Implement MongoDb
 - Protect endpoints with spring security (JWT)
 
+
+- Admin Page
+  - Add series
+  - Add Expansion Sets to Series
+  - Add Cards to Expansion Sets
+  - Edit every entity
+  - Delete every entity
+
 GraphQl Crud tutorial: https://www.youtube.com/watch?v=AgSO3rcSuHE  
 Spring GraphQl Setup tutorial: https://spring.io/guides/gs/graphql-server  
 

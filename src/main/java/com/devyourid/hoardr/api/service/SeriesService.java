@@ -20,7 +20,7 @@ public class SeriesService {
     private final SeriesRepository seriesRepository;
 
     public Series createSeries(String name, String icon) {
-        return seriesRepository.save(new Series(null , name, icon ,new ArrayList<>()));
+        return seriesRepository.save(new Series(null , name, icon , new ArrayList<>()));
     }
 
     public List<Series> findAllSeries() {

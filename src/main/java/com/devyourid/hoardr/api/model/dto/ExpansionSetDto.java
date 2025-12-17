@@ -8,4 +8,5 @@ import lombok.Setter;
 @NoArgsConstructor
 public class ExpansionSetDto {
     private String name;
+    private String icon;
 }

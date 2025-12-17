@@ -7,6 +7,7 @@ import lombok.Setter;
 @Getter @Setter
 @NoArgsConstructor
 public class CardDto {
+    private String face;
     private String name;
     private int number;
     private boolean collected;

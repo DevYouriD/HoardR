@@ -10,6 +10,7 @@ type Card {
 type ExpansionSet {
   id: ID!
   name: String!
+  icon: String
   cards: [Card!]!
 }
 
@@ -32,6 +33,7 @@ type Query {
 }
 
 input CardInput {
+  face: String!
   name: String!
   number: Int!
   collected: Boolean
@@ -40,6 +42,7 @@ input CardInput {
 
 input ExpansionSetInput {
   name: String!
+  icon: String
 }
 
 input SeriesInput {
@@ -53,7 +56,7 @@ type Mutation {
     deleteSeries(id: ID!): String!
 
     addExpansionSetToSeries(seriesId: ID!, input: ExpansionSetInput!): ExpansionSet!
-    updateExpansionSet(seriesId: ID!, expansionSetId: ID!, name: String!): ExpansionSet!
+    updateExpansionSet(seriesId: ID!, expansionSetId: ID!, name: String!, icon: String): ExpansionSet!
     deleteExpansionSet(seriesId: ID!, expansionSetId: ID!): String!
 
     addCardToExpansionSet(seriesId: ID!, expansionSetId: ID!, input: CardInput!): Card!

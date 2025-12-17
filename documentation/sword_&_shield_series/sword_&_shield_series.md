@@ -109,6 +109,19 @@
 [Astral Radiance](https://www.pokellector.com/Astral-Radiance-Expansion/)
 
 ## Lost Origin Trainer Gallery – (2022)
+|                                               Image                                                |   Card Name   | Card Number | In Collection (✅/❌) | Price Indication |
+|:--------------------------------------------------------------------------------------------------:|:-------------:|:-----------:|:-------------------:|:----------------:|
+|     <img src="https://den-cards.pokellector.com/355/Parasect.SWSH11.1.44875.png" width="200"/>     |   Parasect    |     TG1     |          ❌          |       0,-        |
+|     <img src="https://den-cards.pokellector.com/355/Roserade.SWSH11.2.44876.png" width="200"/>     |   Roserade    |     TG2     |          ❌          |       0,-        |
+|    <img src="https://den-cards.pokellector.com/355/Charizard.SWSH11.3.44877.png" width="200"/>     |   Charizard   |     TG3     |          ❌          |       0,-        |
+|    <img src="https://den-cards.pokellector.com/355/Chandelure.SWSH11.4.44878.png" width="200"/>    |  Chandelure   |     TG4     |          ❌          |       0,-        |
+|     <img src="https://den-cards.pokellector.com/355/Pikachu.SWSH11.5.44879.png" width="200"/>      |    Pikachu    |     TG5     |          ❌          |       0,-        |
+|      <img src="https://den-cards.pokellector.com/355/Gengar.SWSH11.6.44880.png" width="200"/>      |    Gengar     |     TG6     |          ❌          |       0,-        |
+|     <img src="https://den-cards.pokellector.com/355/Banette.SWSH11.7.44881.png" width="200"/>      |    Banette    |     TG7     |          ❌          |       0,-        |
+| <img src="https://den-cards.pokellector.com/355/Hisuian-Arcanine.SWSH11.8.44882.png" width="200"/> |   Arcanine    |     TG8     |          ❌          |       0,-        |
+|    <img src="https://den-cards.pokellector.com/355/Spiritomb.SWSH11.9.44883.png" width="200"/>     |   Spiritomb   |     TG9     |          ❌          |       0,-        |
+|     <img src="https://den-cards.pokellector.com/355/Snorlax.SWSH11.10.44884.png" width="200"/>     |    Snorlax    |    TG10     |          ❌          |       0,-        |
+
 [Lost Origin Trainer Gallery](https://www.pokellector.com/Lost-Origin-Trainer-Gallery-Expansion/)
 
 ## Lost Origin – (2022)

@@ -19,12 +19,13 @@ public class ExpansionSetService {
 
     private final SeriesRepository seriesRepository;
 
-    public ExpansionSet addExpansionSet(String seriesId, String name) {
+    public ExpansionSet addExpansionSet(String seriesId, String name, String icon) {
         Series series = seriesRepository.findById(seriesId)
                 .orElseThrow(() -> new GraphQLExceptionHandler.SeriesNotFoundException(seriesId));
 
         ExpansionSet expansionSet = ExpansionSet.builder()
                 .id(UUID.randomUUID().toString())
+                .icon(icon)
                 .name(name)
                 .cards(new ArrayList<>())
                 .build();
@@ -38,7 +39,8 @@ public class ExpansionSetService {
     public ExpansionSet updateExpansionSet(
             String seriesId,
             String expansionSetId,
-            String name
+            String name,
+            String icon
     ) {
         // Fetch Series
         Series series = seriesRepository.findById(seriesId)
@@ -51,6 +53,7 @@ public class ExpansionSetService {
                 .orElseThrow(() -> new GraphQLExceptionHandler.ExpansionSetNotFoundException(expansionSetId));
 
         if (name != null) expansionSet.setName(name);
+        if (icon != null) expansionSet.setIcon(icon);
 
         seriesRepository.save(series);
 
