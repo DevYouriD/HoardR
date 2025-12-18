@@ -5,6 +5,7 @@ import com.devyourid.hoardr.api.model.entity.Series;
 import com.devyourid.hoardr.api.service.CardService;
 import com.devyourid.hoardr.api.service.ExpansionSetService;
 import com.devyourid.hoardr.api.service.SeriesService;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -100,12 +101,13 @@ public class AdminWebController {
                           @RequestParam(required = false) String face,
                           @RequestParam String name,
                           @RequestParam String number,
-                          @RequestParam(required = false) Boolean collected,
+                          @RequestParam Boolean collected,
                           @RequestParam(required = false) Float price) {
         CardDto input = new CardDto();
         input.setName(name);
         input.setFace(face);
         input.setNumber(number);
+        input.setCollected(collected);
         input.setPrice(price != null ? price : 0f);
 
         cardService.addCard(seriesId, expansionSetId, input);

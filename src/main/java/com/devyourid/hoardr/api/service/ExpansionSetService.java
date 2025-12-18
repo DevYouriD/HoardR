@@ -36,6 +36,16 @@ public class ExpansionSetService {
         return expansionSet;
     }
 
+    public ExpansionSet findExpansionSetById(String seriesId, String expansionSetId) {
+        Series series = seriesRepository.findById(seriesId)
+                .orElseThrow(() -> new GraphQLExceptionHandler.SeriesNotFoundException(seriesId));
+
+        return series.getExpansionSets().stream()
+                .filter(es -> es.getId().equals(expansionSetId))
+                .findFirst()
+                .orElseThrow(() -> new GraphQLExceptionHandler.ExpansionSetNotFoundException(expansionSetId));
+    }
+
     public ExpansionSet updateExpansionSet(
             String seriesId,
             String expansionSetId,
