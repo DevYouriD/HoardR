@@ -12,7 +12,7 @@ public class Card {
 //    private Blob face;
     private String face;
     private String name;
-    private int number;
+    private String number;
     private boolean collected;
     private float price;
 

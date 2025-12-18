@@ -10,9 +10,9 @@ public final class Paths {
     /**
      * User actions paths.
      */
-    public static final String SERIES_DETAILS_PATH = "/series/{id}";
+    public static final String GET_SERIES_DETAILS_PATH = "/series/{seriesId}";
 
-    public static final String EXPANSION_SETS_DETAILS_PATH = "/series/{seriesId}/sets/{setId}";
+    public static final String GET_EXPANSION_SETS_DETAILS_PATH = "/series/{seriesId}/sets/{setId}";
 
     /**
      * The base of all ADMIN Thymeleaf paths.
@@ -22,7 +22,7 @@ public final class Paths {
     /**
      * Series actions paths.
      */
-    private static final String SERIES_BASE_PATH = ADMIN_BASE_PATH + "/series";
+    private static final String SERIES_BASE_PATH = "/series";
 
     public static final String ADD_SERIES_PATH = SERIES_BASE_PATH + "/add";
 
@@ -33,7 +33,7 @@ public final class Paths {
     /**
      * Expansion Set actions paths.
      */
-    private static final String EXPANSION_BASE_PATH = ADMIN_BASE_PATH + "/expansion";
+    private static final String EXPANSION_BASE_PATH = "/expansion";
 
     public static final String ADD_EXPANSION_PATH = EXPANSION_BASE_PATH + "/add";
 
@@ -44,7 +44,7 @@ public final class Paths {
     /**
      * Card actions paths.
      */
-    private static final String CARD_BASE_PATH = ADMIN_BASE_PATH + "/card";
+    private static final String CARD_BASE_PATH = "/card";
 
     public static final String ADD_CARD_PATH = CARD_BASE_PATH + "/add";
 

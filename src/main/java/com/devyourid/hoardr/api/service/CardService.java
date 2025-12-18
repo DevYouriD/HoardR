@@ -49,7 +49,7 @@ public class CardService {
             String expansionSetId,
             String cardId,
             String name,
-            Integer number,
+            String number,
             Boolean collected,
             Float price
     ) {

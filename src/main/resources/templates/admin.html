@@ -19,12 +19,12 @@
 <!-- Main Content -->
 <main class="flex-grow container mx-auto px-5 py-10 space-y-10">
 
-    <!-- ADD SERIES -->
+    <!-- Add Series -->
     <section>
         <h2 class="text-2xl font-bold mb-2">Add New Series</h2>
         <form th:action="@{/admin/series/add}" method="post" class="space-y-2">
-            <input type="text" name="name" placeholder="Series Name" class="border p-1 rounded"/>
-            <input type="text" name="icon" placeholder="Icon URL" class="border p-1 rounded"/>
+            <input type="text" name="name" placeholder="Series Name" class="border p-1 border-gray-600 rounded"/>
+            <input type="text" name="icon" placeholder="Icon URL" class="border p-1 border-gray-600 rounded"/>
             <button type="submit" class="bg-blue-600 text-white px-2 py-1 rounded">Add Series</button>
         </form>
     </section>
@@ -32,115 +32,126 @@
     <!-- LIST SERIES -->
     <section>
         <h2 class="text-2xl font-bold mb-2">Series List</h2>
-        <div th:each="series : ${seriesList}" x-data="{ openSeries: false }" class="border p-2 rounded mb-2 space-y-2">
+        <div th:each="series : ${seriesList}" x-data="{ openSeries: false }" class="border p-2 border-gray-600 rounded mb-2 space-y-2">
 
-            <!-- Series header -->
             <div class="flex justify-between items-center cursor-pointer" @click="openSeries = !openSeries">
                 <strong th:text="${series.name}">Series Name</strong>
-                <span x-text="openSeries ? '▼' : '►'"></span>
+                <span x-text="openSeries ? '➖' : '➕️'"></span>
             </div>
 
-            <!-- Collapsible content -->
             <div x-show="openSeries" class="space-y-2 mt-2">
 
                 <!-- Edit Series -->
-                <form th:action="@{/admin/series/update}" method="post" class="space-y-1">
-                    <input type="hidden" name="id" th:value="${series.id}"/>
-                    <input type="text" name="name" th:value="${series.name}" class="border p-1 rounded"/>
-                    <input type="text" name="icon" th:value="${series.icon}" class="border p-1 rounded"/>
-                    <button type="submit" class="bg-green-600 text-white px-2 py-1 rounded">Update Series</button>
-                </form>
+                <div class="flex justify-end items-center space-x-2">
 
-                <!-- Delete Series -->
-                <form th:action="@{/admin/series/delete}" method="post">
-                    <input type="hidden" name="id" th:value="${series.id}"/>
-                    <button type="submit" class="bg-red-600 text-white px-2 py-1 rounded mt-1">Delete Series</button>
-                </form>
+                    <!-- Update Form -->
+                    <form th:action="@{/admin/series/update}" method="post" class="flex items-center space-x-2 flex-1">
+                        <input type="hidden" name="id" th:value="${series.id}"/>
+                        <input type="text" name="name" th:value="${series.name}" class="border p-1 border-gray-600 rounded w-32"/>
+                        <input type="text" name="icon" th:value="${series.icon}" class="border p-1 border-gray-600 rounded w-32"/>
+                        <button type="submit" class="bg-green-600 text-white px-2 py-1 rounded ml-auto">Update</button>
+                    </form>
 
-                <!-- ADD EXPANSION SET -->
+                    <!-- Delete Button -->
+                    <form th:action="@{/admin/series/delete}" method="post" class="flex items-center flex-none">
+                        <input type="hidden" name="id" th:value="${series.id}"/>
+                        <button type="submit" class="bg-red-600 text-white px-2 py-1 rounded">Delete</button>
+                    </form>
+                </div>
+
+                <!-- Add Expansion Set -->
                 <form th:action="@{/admin/expansion/add}" method="post" class="space-y-1">
                     <input type="hidden" name="seriesId" th:value="${series.id}"/>
-                    <input type="text" name="name" placeholder="Expansion Set Name" class="border p-1 rounded"/>
-                    <input type="text" name="icon" placeholder="Icon URL" class="border p-1 rounded"/>
+                    <input type="text" name="name" placeholder="Expansion Set Name" class="border p-1 border-gray-600 rounded"/>
+                    <input type="text" name="icon" placeholder="Icon URL" class="border p-1 border-gray-600 rounded"/>
                     <button type="submit" class="bg-blue-600 text-white px-2 py-1 rounded">Add Expansion Set</button>
                 </form>
 
-                <!-- List expansion sets -->
-                <div th:each="set : ${series.expansionSets}" x-data="{ openSet: false }" class="ml-4 border p-2 rounded mb-1">
+                <!-- List Expansion Sets -->
+                <div th:each="set : ${series.expansionSets}" x-data="{ openSet: false }" class="ml-4 border p-2 border-gray-600 rounded mb-1">
 
-                    <!-- Expansion Set header -->
                     <div class="flex justify-between items-center cursor-pointer" @click="openSet = !openSet">
                         <strong th:text="${set.name}">Expansion Set</strong>
-                        <span x-text="openSet ? '▼' : '►'"></span>
+                        <span x-text="openSet ? '➖' : '➕️'"></span>
                     </div>
 
-                    <!-- Collapsible content -->
                     <div x-show="openSet" class="space-y-2 mt-2">
 
                         <!-- Edit Expansion Set -->
-                        <form th:action="@{/admin/expansion/update}" method="post" class="space-y-1">
-                            <input type="hidden" name="seriesId" th:value="${series.id}"/>
-                            <input type="hidden" name="expansionSetId" th:value="${set.id}"/>
-                            <input type="text" name="name" th:value="${set.name}" class="border p-1 rounded"/>
-                            <input type="text" name="icon" th:value="${set.icon}" class="border p-1 rounded"/>
-                            <button type="submit" class="bg-green-600 text-white px-2 py-1 rounded">Update</button>
-                        </form>
+                        <div class="flex justify-end items-center space-x-2">
 
-                        <!-- Delete Expansion Set -->
-                        <form th:action="@{/admin/expansion/delete}" method="post">
-                            <input type="hidden" name="seriesId" th:value="${series.id}"/>
-                            <input type="hidden" name="expansionSetId" th:value="${set.id}"/>
-                            <button type="submit" class="bg-red-600 text-white px-2 py-1 rounded mt-1">Delete</button>
-                        </form>
+                            <!-- Update Form -->
+                            <form th:action="@{/admin/expansion/update}" method="post" class="flex items-center space-x-2 flex-1">
+                                <input type="hidden" name="seriesId" th:value="${series.id}"/>
+                                <input type="hidden" name="expansionSetId" th:value="${set.id}"/>
+                                <input type="text" name="name" th:value="${set.name}" class="border p-1 border-gray-600 rounded w-32"/>
+                                <input type="text" name="icon" th:value="${set.icon}" class="border p-1 border-gray-600 rounded w-32"/>
+                                <button type="submit" class="bg-green-600 text-white px-2 py-1 rounded ml-auto">Update</button>
+                            </form>
 
-                        <!-- ADD CARD -->
+                            <!-- Delete Button -->
+                            <form th:action="@{/admin/expansion/delete}" method="post" class="flex items-center flex-none">
+                                <input type="hidden" name="seriesId" th:value="${series.id}"/>
+                                <input type="hidden" name="expansionSetId" th:value="${set.id}"/>
+                                <button type="submit" class="bg-red-600 text-white px-2 py-1 rounded">Delete</button>
+                            </form>
+                        </div>
+
+                        <!-- Add Card -->
                         <form th:action="@{/admin/card/add}" method="post" class="space-y-1">
                             <input type="hidden" name="seriesId" th:value="${series.id}"/>
                             <input type="hidden" name="expansionSetId" th:value="${set.id}"/>
-                            <input type="text" name="name" placeholder="Card Name" class="border p-1 rounded"/>
-                            <input type="text" name="face" placeholder="Card Image URL" class="border p-1 rounded"/>
-                            <input type="number" name="number" placeholder="Card Number" class="border p-1 rounded"/>
-                            <input type="number" step="0.01" name="price" placeholder="Price" class="border p-1 rounded"/>
+                            <input type="text" name="name" placeholder="Card Name" class="border p-1 border-gray-600 rounded"/>
+                            <input type="text" name="face" placeholder="Card Image URL" class="border p-1 border-gray-600 rounded"/>
+                            <input type="number" name="number" placeholder="Card Number" class="border p-1 border-gray-600 rounded"/>
+                            <input type="number" step="0.01" name="price" placeholder="Price" class="border p-1 border-gray-600 rounded"/>
                             <label>
                                 <input type="checkbox" name="collected"/> Collected
                             </label>
                             <button type="submit" class="bg-blue-600 text-white px-2 py-1 rounded">Add Card</button>
                         </form>
 
-                        <!-- List cards -->
-                        <div th:each="card : ${set.cards}" class="ml-4 border p-2 rounded mb-1">
+                        <!-- List Cards -->
+                        <div th:each="card : ${set.cards}" class="ml-4 border p-2 border-gray-600 rounded mb-1">
+
                             <p>
                                 <strong th:text="${card.name}">Card Name</strong>
                                 (ID: <span th:text="${card.id}"></span>)
                             </p>
 
-                            <!-- Edit Card -->
-                            <form th:action="@{/admin/card/update}" method="post" class="space-y-1">
-                                <input type="hidden" name="seriesId" th:value="${series.id}"/>
-                                <input type="hidden" name="expansionSetId" th:value="${set.id}"/>
-                                <input type="hidden" name="cardId" th:value="${card.id}"/>
-                                <input type="text" name="name" th:value="${card.name}" class="border p-1 rounded"/>
-                                <input type="text" name="face" th:value="${card.face}" class="border p-1 rounded"/>
-                                <input type="number" name="number" th:value="${card.number}" class="border p-1 rounded"/>
-                                <input type="number" step="0.01" name="price" th:value="${card.price}" class="border p-1 rounded"/>
-                                <label>
-                                    <input type="checkbox" name="collected" th:checked="${card.collected}"/> Collected
-                                </label>
-                                <button type="submit" class="bg-green-600 text-white px-2 py-1 rounded">Update</button>
-                            </form>
+                            <div class="flex justify-end items-center space-x-2">
 
-                            <!-- Delete Card -->
-                            <form th:action="@{/admin/card/delete}" method="post">
-                                <input type="hidden" name="seriesId" th:value="${series.id}"/>
-                                <input type="hidden" name="expansionSetId" th:value="${set.id}"/>
-                                <input type="hidden" name="cardId" th:value="${card.id}"/>
-                                <button type="submit" class="bg-red-600 text-white px-2 py-1 rounded mt-1">Delete</button>
-                            </form>
+                                <!-- Update Form -->
+                                <form th:action="@{/admin/card/update}" method="post" class="flex items-center space-x-2 flex-1">
+                                    <input type="hidden" name="seriesId" th:value="${series.id}"/>
+                                    <input type="hidden" name="expansionSetId" th:value="${set.id}"/>
+                                    <input type="hidden" name="cardId" th:value="${card.id}"/>
+
+                                    <!-- Update Fields -->
+                                    <input type="text" name="name" th:value="${card.name}" class="border p-1 border-gray-600 rounded w-32"/>
+                                    <input type="text" name="face" th:value="${card.face}" class="border p-1 border-gray-600 rounded w-32"/>
+                                    <input type="number" name="number" th:value="${card.number}" class="border p-1 border-gray-600 rounded w-16"/>
+                                    <input type="number" step="0.01" name="price" th:value="${card.price}" class="border p-1 border-gray-600 rounded w-16"/>
+                                    <label class="flex items-center space-x-1">
+                                        <input type="checkbox" name="collected" th:checked="${card.collected}"/>
+                                        <span>Collected</span>
+                                    </label>
+
+                                    <!-- Update Button -->
+                                    <button type="submit" class="bg-green-600 text-white px-2 py-1 rounded ml-auto">Update</button>
+                                </form>
+
+                                <!-- 3️⃣ Delete Button -->
+                                <form th:action="@{/admin/card/delete}" method="post" class="flex items-center flex-none">
+                                    <input type="hidden" name="seriesId" th:value="${series.id}"/>
+                                    <input type="hidden" name="expansionSetId" th:value="${set.id}"/>
+                                    <input type="hidden" name="cardId" th:value="${card.id}"/>
+                                    <button type="submit" class="bg-red-600 text-white px-2 py-1 rounded">Delete</button>
+                                </form>
+                            </div>
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </section>

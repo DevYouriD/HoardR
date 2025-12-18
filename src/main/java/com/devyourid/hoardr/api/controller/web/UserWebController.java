@@ -11,15 +11,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
 import static com.devyourid.hoardr.api.utility.Paths.BASE_PATH;
-import static com.devyourid.hoardr.api.utility.Paths.EXPANSION_SETS_DETAILS_PATH;
-import static com.devyourid.hoardr.api.utility.Paths.SERIES_DETAILS_PATH;
+import static com.devyourid.hoardr.api.utility.Paths.GET_EXPANSION_SETS_DETAILS_PATH;
+import static com.devyourid.hoardr.api.utility.Paths.GET_SERIES_DETAILS_PATH;
 
 @Controller
 @Getter @Setter
@@ -37,16 +35,16 @@ public class UserWebController {
         return "home.html";
     }
 
-    @GetMapping(SERIES_DETAILS_PATH)
-    public String seriesDetail(@PathVariable String id, Model model) {
-        Series series = seriesService.findSeriesById(id);
+    @GetMapping(GET_SERIES_DETAILS_PATH)
+    public String getSeriesDetail(@PathVariable String seriesId, Model model) {
+        Series series = seriesService.findSeriesById(seriesId);
         model.addAttribute("series", series);
         model.addAttribute("expansionSets", series.getExpansionSets());
         return "series-detailed";
     }
 
-    @GetMapping(EXPANSION_SETS_DETAILS_PATH)
-    public String expansionSetDetail(
+    @GetMapping(GET_EXPANSION_SETS_DETAILS_PATH)
+    public String getExpansionSetDetail(
             @PathVariable String seriesId,
             @PathVariable String setId,
             Model model

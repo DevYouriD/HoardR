@@ -18,8 +18,8 @@
         <a class="text-4xl font-bold text-center absolute left-1/2 transform -translate-x-1/2" href="/">Series</a>
 
         <!-- Pencil icon aligned to right -->
-        <a href="/admin" class="text-2xl hover:text-gray-200">
-            ✏️
+        <a href="/admin" class="text-3xl hover:text-gray-200">
+            ✎️
         </a>
     </div>
 </header>
@@ -33,7 +33,7 @@
                 <!-- Series Card -->
                 <div th:each="series : ${seriesList}" class="lg:w-1/3 sm:w-1/2 w-full p-3">
                     <div class="relative group cursor-pointer mx-auto bg-gray-800 rounded-lg border-2 border-gray-700 overflow-hidden"
-                         th:onclick="|window.location='@{/series/{id}(id=${series.id})}'|">
+                         th:onclick="|window.location='@{/series/{seriesId}(seriesId=${series.id})}'|">
 
                         <!-- Image container -->
                         <div class="flex items-center justify-center p-6 h-48 w-full bg-gray-200">

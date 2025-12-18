@@ -29,42 +29,40 @@
                 <div th:each="card : ${cards}"
                      class="lg:w-1/5 md:w-1/4 sm:w-1/2 w-full p-3">
 
-                    <div class="bg-gray-100 border-2 border-gray-300 rounded-lg overflow-hidden">
+                    <div class="relative bg-gray-100 border-2 border-gray-300 rounded-lg overflow-hidden">
 
-                        <!-- Card image -->
+                        <!-- Collected Checkbox -->
+                        <input
+                                type="checkbox"
+                                th:checked="${card.collected}"
+                                disabled
+                                class="absolute top-2 right-2 w-5 h-5
+                                    accent-green-600 cursor-default"
+                                    aria-label="Collected"
+                        />
+
+                        <!-- Card face -->
                         <div class="flex items-center justify-center h-56 p-4 bg-white">
-
-                            <!-- Real card image -->
                             <img th:if="${card.face != null}"
                                  th:src="${card.face}"
                                  class="max-h-full max-w-full object-contain"
-                                 alt="Card image"/>
+                                 alt="Card"/>
 
-                            <!-- Fallback placeholder -->
                             <img th:if="${card.face == null}"
                                  th:src="@{https://dummyimage.com/200x280/ddd/111(text=${'#' + card.number})}"
                                  class="max-h-full max-w-full object-contain"
                                  alt="Card placeholder"/>
-
                         </div>
 
                         <!-- Card info -->
                         <div class="p-3 text-center">
                             <h2 class="font-semibold text-gray-900 truncate"
-                                th:text="${card.name}">
-                                Card Name
-                            </h2>
+                                th:text="${card.name}">Card Name</h2>
+
                             <p class="text-sm text-gray-500">
                                 #<span th:text="${card.number}">1</span>
                             </p>
 
-                            <!-- Collected badge -->
-                            <span th:if="${card.collected}"
-                                  class="inline-block mt-2 text-xs font-semibold px-2 py-1 rounded bg-green-600 text-white">
-                                Collected
-                            </span>
-
-                            <!-- Price -->
                             <p th:if="${card.price != null}"
                                class="text-xs text-gray-600 mt-1">
                                 €<span th:text="${card.price}">0.00</span>

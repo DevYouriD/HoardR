@@ -99,7 +99,7 @@ public class AdminWebController {
                           @RequestParam String expansionSetId,
                           @RequestParam(required = false) String face,
                           @RequestParam String name,
-                          @RequestParam Integer number,
+                          @RequestParam String number,
                           @RequestParam(required = false) Boolean collected,
                           @RequestParam(required = false) Float price) {
         CardDto input = new CardDto();
@@ -117,7 +117,7 @@ public class AdminWebController {
                              @RequestParam String expansionSetId,
                              @RequestParam String cardId,
                              @RequestParam String name,
-                             @RequestParam Integer number,
+                             @RequestParam String number,
                              @RequestParam(required = false) Float price,
                              @RequestParam(required = false) Boolean collected) {
 

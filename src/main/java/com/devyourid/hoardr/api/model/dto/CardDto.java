@@ -9,7 +9,7 @@ import lombok.Setter;
 public class CardDto {
     private String face;
     private String name;
-    private int number;
+    private String number;
     private boolean collected;
     private float price;
 }

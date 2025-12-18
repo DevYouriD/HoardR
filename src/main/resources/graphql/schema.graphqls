@@ -2,7 +2,7 @@ type Card {
     id: ID!
     face: String!
     name: String!
-    number: Int!
+    number: String!
     collected: Boolean!
     price: Float!
 }
@@ -35,7 +35,7 @@ type Query {
 input CardInput {
   face: String!
   name: String!
-  number: Int!
+  number: String!
   collected: Boolean
   price: Float!
 }
@@ -60,6 +60,6 @@ type Mutation {
     deleteExpansionSet(seriesId: ID!, expansionSetId: ID!): String!
 
     addCardToExpansionSet(seriesId: ID!, expansionSetId: ID!, input: CardInput!): Card!
-    updateCard(seriesId: ID!, expansionSetId: ID!, cardId: ID!, name: String, number: Int, collected: Boolean, price: Float): Card!
+    updateCard(seriesId: ID!, expansionSetId: ID!, cardId: ID!, name: String, number: String, collected: Boolean, price: Float): Card!
     deleteCard(seriesId: ID!, expansionSetId: ID!, cardId: ID!): String!
 }

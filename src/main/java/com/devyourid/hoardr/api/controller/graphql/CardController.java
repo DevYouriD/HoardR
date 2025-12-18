@@ -32,7 +32,7 @@ public class CardController {
             @Argument String expansionSetId,
             @Argument String cardId,
             @Argument String name,
-            @Argument Integer number,
+            @Argument String number,
             @Argument Boolean collected,
             @Argument Float price
     ) {
