@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<body>
+    <div th:fragment="card-list(seriesId, set)"
+         th:id="'card-list-' + ${set.id}"
+         class="space-y-2">
+
+        <div th:each="card : ${set.cards}"
+             class="border p-2 rounded bg-white">
+
+            <strong th:text="${card.name}"></strong>
+            <span class="text-sm text-gray-600">
+                (#<span th:text="${card.number}"></span>)
+            </span>
+
+            <div class="flex justify-end mt-2 space-x-2">
+                <!-- Update -->
+                <form
+                    th:hx-post="@{/admin/card/update}"
+                    th:hx-target="'#card-list-' + ${set.id}"
+                    hx-swap="outerHTML">
+
+                    <input type="hidden" name="seriesId" th:value="${seriesId}"/>
+                    <input type="hidden" name="expansionSetId" th:value="${set.id}"/>
+                    <input type="hidden" name="cardId" th:value="${card.id}"/>
+
+                    <input name="name" th:value="${card.name}" class="border p-1 w-24"/>
+                    <input name="number" th:value="${card.number}" class="border p-1 w-16"/>
+                    <input name="price" th:value="${card.price}" class="border p-1 w-16"/>
+
+                    <label class="text-sm">
+                        <input type="checkbox" name="collected" th:checked="${card.collected}"/>
+                        Collected
+                    </label>
+
+                    <button class="bg-green-600 text-white px-2 py-1 rounded">
+                        Update
+                    </button>
+                </form>
+
+                <!-- Delete -->
+                <form
+                    th:hx-post="@{/admin/card/delete}"
+                    th:hx-target="'#card-list-' + ${set.id}"
+                    hx-swap="outerHTML">
+
+                    <input type="hidden" name="seriesId" th:value="${seriesId}"/>
+                    <input type="hidden" name="expansionSetId" th:value="${set.id}"/>
+                    <input type="hidden" name="cardId" th:value="${card.id}"/>
+
+                    <button class="bg-red-600 text-white px-2 py-1 rounded">
+                        Delete
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

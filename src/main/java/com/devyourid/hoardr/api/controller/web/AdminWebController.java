@@ -1,11 +1,11 @@
 package com.devyourid.hoardr.api.controller.web;
 
 import com.devyourid.hoardr.api.model.dto.CardDto;
+import com.devyourid.hoardr.api.model.entity.ExpansionSet;
 import com.devyourid.hoardr.api.model.entity.Series;
 import com.devyourid.hoardr.api.service.CardService;
 import com.devyourid.hoardr.api.service.ExpansionSetService;
 import com.devyourid.hoardr.api.service.SeriesService;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -98,20 +98,26 @@ public class AdminWebController {
     @PostMapping(ADD_CARD_PATH)
     public String addCard(@RequestParam String seriesId,
                           @RequestParam String expansionSetId,
-                          @RequestParam(required = false) String face,
                           @RequestParam String name,
                           @RequestParam String number,
-                          @RequestParam Boolean collected,
-                          @RequestParam(required = false) Float price) {
+                          @RequestParam(required = false) Float price,
+                          @RequestParam(required = false) Boolean collected,
+                          Model model) {
+
         CardDto input = new CardDto();
         input.setName(name);
-        input.setFace(face);
         input.setNumber(number);
-        input.setCollected(collected);
         input.setPrice(price != null ? price : 0f);
+        input.setCollected(collected != null && collected);
 
         cardService.addCard(seriesId, expansionSetId, input);
-        return ADMIN_PANEL_REDIRECT_URL;
+
+        ExpansionSet set = expansionSetService.findExpansionSetById(seriesId, expansionSetId);
+
+        model.addAttribute("seriesId", seriesId);
+        model.addAttribute("set", set);
+
+        return "fragments/cards :: card-list";
     }
 
     @PostMapping(UPDATE_CARD_PATH)
@@ -121,21 +127,40 @@ public class AdminWebController {
                              @RequestParam String name,
                              @RequestParam String number,
                              @RequestParam(required = false) Float price,
-                             @RequestParam(required = false) Boolean collected) {
+                             @RequestParam(required = false) Boolean collected,
+                             Model model) {
 
-        cardService.updateCard(seriesId, expansionSetId, cardId,
+        cardService.updateCard(
+                seriesId,
+                expansionSetId,
+                cardId,
                 name,
                 number,
-                collected != null ? collected : false,
-                price != null ? price : 0f);
-        return ADMIN_PANEL_REDIRECT_URL;
+                collected != null && collected,
+                price != null ? price : 0f
+        );
+
+        ExpansionSet set = expansionSetService.findExpansionSetById(seriesId, expansionSetId);
+
+        model.addAttribute("seriesId", seriesId);
+        model.addAttribute("set", set);
+
+        return "fragments/cards :: card-list";
     }
 
     @PostMapping(DELETE_CARD_PATH)
     public String deleteCard(@RequestParam String seriesId,
                              @RequestParam String expansionSetId,
-                             @RequestParam String cardId) {
+                             @RequestParam String cardId,
+                             Model model) {
+
         cardService.deleteCard(seriesId, expansionSetId, cardId);
-        return ADMIN_PANEL_REDIRECT_URL;
+
+        ExpansionSet set = expansionSetService.findExpansionSetById(seriesId, expansionSetId);
+
+        model.addAttribute("seriesId", seriesId);
+        model.addAttribute("set", set);
+
+        return "fragments/cards :: card-list";
     }
 }
