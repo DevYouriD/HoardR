@@ -140,7 +140,7 @@
                                         <button type="submit" class="bg-green-600 text-white px-2 py-1 rounded ml-auto">Update</button>
                                     </form>
 
-                                    <!-- 3️⃣ Delete Button -->
+                                    <!-- Delete Button -->
                                     <form th:action="@{/admin/card/delete}" method="post" class="flex items-center flex-none">
                                         <input type="hidden" name="seriesId" th:value="${series.id}"/>
                                         <input type="hidden" name="expansionSetId" th:value="${set.id}"/>

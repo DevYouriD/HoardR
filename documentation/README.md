@@ -54,8 +54,9 @@ Mega Charizard X ex (PFL 125)
 ---
 
 ### OTHER LINKS
+[TCG Data and Resources](https://www.pokedata.io/sets)  
 [List of Sets](https://www.pokellector.com/sets)  
-[Pokemon Full Art list](www.zardhunt.com/s/stories/full-list-of-pokemon-alternate-art-cards#YOuHqg)  
+[Pokémon Full Art list](www.zardhunt.com/s/stories/full-list-of-pokemon-alternate-art-cards#YOuHqg)  
 [Trainer Full Art list](https://docs.google.com/document/d/199uU2nGfnPt5WG2o2QvmSIxic6PYLPCU/edit)  
 [All Art Carts Spreadsheet](https://docs.google.com/spreadsheets/d/1iYtq1A1RZhYMmWoawIVkVGMZxo3CLu_nkCpzSBpoJFs/edit?gid=0#gid=0)  
 
