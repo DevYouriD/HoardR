@@ -31,12 +31,13 @@ public class CardController {
             @Argument String seriesId,
             @Argument String expansionSetId,
             @Argument String cardId,
+            @Argument String face,
             @Argument String name,
             @Argument String number,
             @Argument Boolean collected,
             @Argument Float price
     ) {
-        return cardService.updateCard(seriesId, expansionSetId, cardId, name, number, collected, price);
+        return cardService.updateCard(seriesId, expansionSetId, cardId, face, name, number, collected, price);
     }
 
     // DELETE

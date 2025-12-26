@@ -100,6 +100,7 @@ public class AdminWebController {
                           @RequestParam String expansionSetId,
                           @RequestParam String name,
                           @RequestParam String number,
+                          @RequestParam(required = false) String face,
                           @RequestParam(required = false) Float price,
                           @RequestParam(required = false) Boolean collected,
                           Model model) {
@@ -107,6 +108,7 @@ public class AdminWebController {
         CardDto input = new CardDto();
         input.setName(name);
         input.setNumber(number);
+        input.setFace(face);
         input.setPrice(price != null ? price : 0f);
         input.setCollected(collected != null && collected);
 
@@ -125,7 +127,8 @@ public class AdminWebController {
                              @RequestParam String expansionSetId,
                              @RequestParam String cardId,
                              @RequestParam String name,
-                             @RequestParam String number,
+                             @RequestParam String face,
+                             @RequestParam(required = false) String number,
                              @RequestParam(required = false) Float price,
                              @RequestParam(required = false) Boolean collected,
                              Model model) {
@@ -134,6 +137,7 @@ public class AdminWebController {
                 seriesId,
                 expansionSetId,
                 cardId,
+                face,
                 name,
                 number,
                 collected != null && collected,

@@ -10,7 +10,7 @@
 
             <strong th:text="${card.name}"></strong>
             <span class="text-sm text-gray-600">
-                (#<span th:text="${card.number}"></span>)
+                (<span th:text="${card.number}"></span>)
             </span>
 
             <div class="flex justify-end mt-2 space-x-2">
@@ -24,9 +24,10 @@
                     <input type="hidden" name="expansionSetId" th:value="${set.id}"/>
                     <input type="hidden" name="cardId" th:value="${card.id}"/>
 
-                    <input name="name" th:value="${card.name}" class="border p-1 w-24"/>
-                    <input name="number" th:value="${card.number}" class="border p-1 w-16"/>
-                    <input name="price" th:value="${card.price}" class="border p-1 w-16"/>
+                    <input name="name" th:value="${card.name}" placeholder="Card Name" class="border p-1 w-24"/>
+                    <input name="face" th:value="${card.face}" placeholder="Card Image URL" class="border p-1 w-32"/>
+                    <input name="number" th:value="${card.number}" placeholder="Number" class="border p-1 w-16"/>
+                    <input name="price" th:value="${card.price}" placeholder="Price" class="border p-1 w-16"/>
 
                     <label class="text-sm">
                         <input type="checkbox" name="collected" th:checked="${card.collected}"/>

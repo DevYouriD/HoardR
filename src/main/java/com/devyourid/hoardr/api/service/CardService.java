@@ -48,6 +48,7 @@ public class CardService {
             String seriesId,
             String expansionSetId,
             String cardId,
+            String face,
             String name,
             String number,
             Boolean collected,
@@ -69,6 +70,7 @@ public class CardService {
                 .findFirst()
                 .orElseThrow(() -> new GraphQLExceptionHandler.CardNotFoundException(cardId));
 
+        if (face != null) card.setFace(face);
         if (name != null) card.setName(name);
         if (number != null) card.setNumber(number);
         if (collected != null) card.setCollected(collected);
