@@ -12,16 +12,20 @@
 <!-- Header -->
 <header class="bg-orange-800 text-orange-100 body-font py-4">
     <div class="container mx-auto px-5 flex items-center justify-between">
-        <!-- Left spacer (empty, same width as right icon) -->
+        <!-- Left spacer -->
         <div class="w-6"></div>
 
-        <!-- Title (flex-grow centers it) -->
-        <div class="flex-1 text-center">
-            <a href="/" class="text-4xl font-bold" th:text="${set.name}">Expansion Set</a>
-        </div>
+        <!-- Centered title -->
+        <h1 class="flex-1 text-center truncate sm:truncate-none">
+            <a href="/"
+               class="font-bold text-2xl sm:text-2xl md:text-3xl leading-tight sm:leading-snug md:leading-normal text-center flex-1 truncate sm:truncate-none"
+               th:text="${set.name}">
+                Expansion Set
+            </a>
+        </h1>
 
         <!-- Right icon -->
-        <a href="/admin" class="w-6 text-3xl text-right hover:text-gray-200">
+        <a href="/admin" class="text-3xl hover:text-gray-200">
             ✎️
         </a>
     </div>
@@ -47,10 +51,10 @@
 
                         <!-- Card face -->
                         <div class="flex items-center justify-center h-96 p-4 bg-white">
-                            <img th:if="${card.face != null}"
-                                 th:src="${card.face}"
-                                 class="max-h-full max-w-full object-contain"
-                                 alt="Card"/>
+                            <a th:if="${card.face != null}"
+                               th:href="${card.face}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full h-full">
+                                <img th:src="${card.face}" class="max-h-full max-w-full object-contain" alt="Card"/>
+                            </a>
 
                             <img th:if="${card.face == null}"
                                  th:src="@{https://dummyimage.com/200x280/ddd/111(text=${'#' + card.number})}"
