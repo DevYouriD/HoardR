@@ -1,0 +1,66 @@
+name: Hoardr CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # ----- APPLICATION STEPS ----- #
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Cache Gradle dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.gradle/caches
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Build with Gradle
+        run: ./gradlew clean build --no-daemon -x test
+
+      # ----- DOCKER STEPS ----- #
+
+      - name: Log in to Docker Hub
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login \
+            -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+
+      - name: Build Docker image
+        if: github.ref == 'refs/heads/main'
+        run: |
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/hoardr:latest .
+
+      - name: Push Docker image
+        if: github.ref == 'refs/heads/main'
+        run: |
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/hoardr:latest
+
+      # ----- DEPLOY TO ORACLE VM ----- #
+
+      - name: Deploy on Oracle VM
+        if: github.ref == 'refs/heads/main'
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.ORACLE_HOST }}
+          username: ubuntu
+          key: ${{ secrets.ORACLE_SSH_KEY }}
+          script: |
+            cd /opt/hoardr
+            docker compose pull
+            docker compose up -d
