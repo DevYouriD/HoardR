@@ -15,6 +15,12 @@ ToDo:
   - Edit every entity
   - Delete every entity
 
+- Additional Ideas
+  - Link to card data on top of Expansion Set Page
+  - Total amount of cards value for sets
+  - How was the card collected value for sets (e.g. pulled or bought as single)
+  - If the card was bought as single, for how much was it bought
+
 GraphQl Crud tutorial: https://www.youtube.com/watch?v=AgSO3rcSuHE  
 Spring GraphQl Setup tutorial: https://spring.io/guides/gs/graphql-server  
 

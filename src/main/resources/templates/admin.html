@@ -11,7 +11,7 @@
 <body class="bg-white text-gray-900 min-h-screen flex flex-col">
 
 <header class="bg-orange-800 text-orange-100 py-4 text-center">
-    <h1 class="text-4xl font-bold">Admin Panel</h1>
+    <a class="text-4xl font-bold" href="/">Admin Panel</a>
 </header>
 
 <main class="flex-grow container mx-auto px-5 py-10 space-y-10">
@@ -47,6 +47,7 @@
                 <form th:action="@{/admin/expansion/add}" method="post">
                     <input type="hidden" name="seriesId" th:value="${series.id}"/>
                     <input name="name" placeholder="Expansion Name" class="border p-2 w-full mb-2"/>
+                    <input name="icon" placeholder="Icon URL" class="border p-2 w-full mb-2"/>
                     <button class="bg-blue-600 text-white px-3 py-2 rounded">Add Expansion</button>
                 </form>
 
@@ -78,7 +79,7 @@
                             <input name="price" type="number" step="0.01" placeholder="Price" class="border p-2 w-full mb-2"/>
 
                             <label class="block mb-2">
-                                <input type="checkbox" name="collected"/> Collected
+                                <input type="checkbox" name="collected" value="true"/> Collected
                             </label>
 
                             <button class="bg-blue-600 text-white px-3 py-2 rounded">
