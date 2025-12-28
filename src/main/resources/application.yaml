@@ -8,8 +8,13 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb://mongodb:27017/cardcollectiondb
+      port: 27017
+      host: mongodb
 
   graphql:
     graphiql:
       enabled: true
+
+server:
+  error:
+    include-messages: always
