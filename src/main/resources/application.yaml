@@ -1,20 +1,26 @@
 spring:
   application:
     name: hoardr
+  data:
+    mongodb:
+      uri: mongodb://mongodb:27017/cardcollectiondb
+  graphql:
+    graphiql:
+      enabled: true
 
 #    data:
 #      mongodb:
 #        uri: mongodb://root:root@localhost:27017/cardcollectiondb?authSource=admin
 
-  data:
-    mongodb:
-      port: 27017
-      host: mongodb
-
-  graphql:
-    graphiql:
-      enabled: true
-
 server:
   error:
     include-messages: always
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
