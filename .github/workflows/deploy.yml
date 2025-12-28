@@ -64,6 +64,6 @@ jobs:
           username: ubuntu
           key: ${{ secrets.ORACLE_SSH_KEY }}
           script: |
-            cd /opt/hoardr
-            docker-compose pull
-            docker-compose up -d
+            cd ~/hoardr
+            docker compose pull
+            docker compose up -d

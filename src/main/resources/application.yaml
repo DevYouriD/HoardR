@@ -6,6 +6,10 @@ spring:
 #      mongodb:
 #        uri: mongodb://root:root@localhost:27017/cardcollectiondb?authSource=admin
 
+  data:
+    mongodb:
+      uri: mongodb://mongodb:27017/cardcollectiondb
+
   graphql:
     graphiql:
       enabled: true
