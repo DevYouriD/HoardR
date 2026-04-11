@@ -1,4 +1,9 @@
-# HoardR Pokemon TCG Collection Tracker
+# HoardR Collection Tracker
+
+The HoardR Pokémon TCG Collection Tracker is a personal tracker for your collection. The application allows you to 
+regiser and edit Series, Expansion Sets and Cards. 
+
+![Collectr Example Page](documentation/Collectr_example_page.png)
 
 ---
 

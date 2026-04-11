@@ -57,5 +57,5 @@ public final class Paths {
      */
     public static final String ADMIN_PANEL_REDIRECT_URL = "redirect:/admin";
 
-    private Paths() { /* Empty constructor to prohibit initialisation. */ }
+    private Paths() { /* Empty constructor to prohibit initialization. */ }
 }
