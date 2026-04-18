@@ -83,8 +83,12 @@
 
 <!-- Footer -->
 <footer class="bg-orange-800 text-orange-200 text-center text-sm py-4">
-    &copy; 2025 DevYouriD. All rights reserved.
+    &copy; <span id="year"></span> DevYouriD. All rights reserved.
 </footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
