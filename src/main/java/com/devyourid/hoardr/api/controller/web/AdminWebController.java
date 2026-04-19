@@ -48,16 +48,18 @@ public class AdminWebController {
 
     @PostMapping(ADD_SERIES_PATH)
     public String addSeries(@RequestParam String name,
-                            @RequestParam(required = false) String icon) {
-        seriesService.createSeries(name, icon);
+                            @RequestParam(required = false) String icon,
+                            @RequestParam String releaseDate) {
+        seriesService.createSeries(name, icon, releaseDate);
         return ADMIN_PANEL_REDIRECT_URL;
     }
 
     @PostMapping(UPDATE_SERIES_PATH)
     public String updateSeries(@RequestParam String id,
                                @RequestParam String name,
-                               @RequestParam(required = false) String icon) {
-        seriesService.updateSeries(id, name, icon);
+                               @RequestParam(required = false) String icon,
+                               @RequestParam String releaseDate) {
+        seriesService.updateSeries(id, name, icon, releaseDate);
         return ADMIN_PANEL_REDIRECT_URL;
     }
 
@@ -72,8 +74,9 @@ public class AdminWebController {
     @PostMapping(ADD_EXPANSION_PATH)
     public String addExpansionSet(@RequestParam String seriesId,
                                   @RequestParam String name,
-                                  @RequestParam(required = false) String icon) {
-        expansionSetService.addExpansionSet(seriesId, name, icon);
+                                  @RequestParam(required = false) String icon,
+                                  @RequestParam String releaseDate) {
+        expansionSetService.addExpansionSet(seriesId, name, icon, releaseDate);
         return ADMIN_PANEL_REDIRECT_URL;
     }
 
@@ -81,8 +84,9 @@ public class AdminWebController {
     public String updateExpansionSet(@RequestParam String seriesId,
                                      @RequestParam String expansionSetId,
                                      @RequestParam String name,
-                                     @RequestParam(required = false) String icon) {
-        expansionSetService.updateExpansionSet(seriesId, expansionSetId, name, icon);
+                                     @RequestParam(required = false) String icon,
+                                     @RequestParam String releaseDate) {
+        expansionSetService.updateExpansionSet(seriesId, expansionSetId, name, icon, releaseDate);
         return ADMIN_PANEL_REDIRECT_URL;
     }
 

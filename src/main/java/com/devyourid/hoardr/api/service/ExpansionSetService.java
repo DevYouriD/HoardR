@@ -9,7 +9,9 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.UUID;
 
 @Service
@@ -19,7 +21,7 @@ public class ExpansionSetService {
 
     private final SeriesRepository seriesRepository;
 
-    public ExpansionSet addExpansionSet(String seriesId, String name, String icon) {
+    public ExpansionSet addExpansionSet(String seriesId, String name, String icon, String releaseDate) {
         Series series = seriesRepository.findById(seriesId)
                 .orElseThrow(() -> new GraphQLExceptionHandler.SeriesNotFoundException(seriesId));
 
@@ -27,10 +29,22 @@ public class ExpansionSetService {
                 .id(UUID.randomUUID().toString())
                 .icon(icon)
                 .name(name)
+                .releaseDate(releaseDate != null && !releaseDate.isBlank() ? LocalDate.parse(releaseDate) : LocalDate.now())
                 .cards(new ArrayList<>())
                 .build();
 
         series.getExpansionSets().add(expansionSet);
+
+        // Sort by newest to oldest
+        if (series.getExpansionSets() != null) {
+            series.getExpansionSets().sort(
+                    Comparator.comparing(
+                            ExpansionSet::getReleaseDate,
+                            Comparator.nullsLast(Comparator.naturalOrder())
+                    ).reversed()
+            );
+        }
+
         seriesRepository.save(series);
 
         return expansionSet;
@@ -50,7 +64,8 @@ public class ExpansionSetService {
             String seriesId,
             String expansionSetId,
             String name,
-            String icon
+            String icon,
+            String releaseDate
     ) {
         // Fetch Series
         Series series = seriesRepository.findById(seriesId)
@@ -64,6 +79,19 @@ public class ExpansionSetService {
 
         if (name != null) expansionSet.setName(name);
         if (icon != null) expansionSet.setIcon(icon);
+        if (releaseDate != null) {
+            expansionSet.setReleaseDate(LocalDate.parse(releaseDate));
+        }
+
+        // Sort by newest to oldest
+        if (series.getExpansionSets() != null) {
+            series.getExpansionSets().sort(
+                    Comparator.comparing(
+                            ExpansionSet::getReleaseDate,
+                            Comparator.nullsLast(Comparator.naturalOrder())
+                    ).reversed()
+            );
+        }
 
         seriesRepository.save(series);
 

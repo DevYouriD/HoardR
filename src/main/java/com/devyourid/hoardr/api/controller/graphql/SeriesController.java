@@ -24,7 +24,7 @@ public class SeriesController {
 
     @MutationMapping
     public Series createSeries(@Argument("input") SeriesDto input) {
-        return seriesService.createSeries(input.getName(), input.getIcon());
+        return seriesService.createSeries(input.getName(), input.getIcon(), input.getReleaseDate());
     }
 
     // READ
@@ -42,8 +42,8 @@ public class SeriesController {
     // UPDATE
 
     @MutationMapping
-    public Series updateSeries(@Argument String id, @Argument String name, @Argument String icon) {
-        return seriesService.updateSeries(id, name, icon);
+    public Series updateSeries(@Argument String id, @Argument String name, @Argument String icon, @Argument String releaseDate) {
+        return seriesService.updateSeries(id, name, icon, releaseDate);
     }
 
     // DELETE

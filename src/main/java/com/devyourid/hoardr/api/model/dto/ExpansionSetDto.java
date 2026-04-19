@@ -9,4 +9,5 @@ import lombok.Setter;
 public class ExpansionSetDto {
     private String name;
     private String icon;
+    private String releaseDate;
 }

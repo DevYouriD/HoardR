@@ -21,14 +21,14 @@ public class ExpansionSetController {
 
     @MutationMapping
     public ExpansionSet addExpansionSetToSeries(@Argument String seriesId, @Argument("input") ExpansionSetDto input) {
-        return expansionSetService.addExpansionSet(seriesId, input.getName(), input.getIcon());
+        return expansionSetService.addExpansionSet(seriesId, input.getName(), input.getIcon(), input.getReleaseDate());
     }
 
     // UPDATE
 
     @MutationMapping
-    public ExpansionSet updateExpansionSet(@Argument String seriesId, @Argument String expansionSetId, @Argument String name, @Argument String icon) {
-        return expansionSetService.updateExpansionSet(seriesId, expansionSetId, name, icon);
+    public ExpansionSet updateExpansionSet(@Argument String seriesId, @Argument String expansionSetId, @Argument String name, @Argument String icon, @Argument String releaseDate) {
+        return expansionSetService.updateExpansionSet(seriesId, expansionSetId, name, icon, releaseDate);
     }
 
     // DELETE

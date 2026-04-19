@@ -11,6 +11,7 @@ type ExpansionSet {
   id: ID!
   name: String!
   icon: String
+  releaseDate: String
   cards: [Card!]!
 }
 
@@ -18,6 +19,7 @@ type Series {
   id: ID!
   name: String!
   icon: String
+  releaseDate: String
   expansionSets: [ExpansionSet!]!
 }
 
@@ -43,20 +45,22 @@ input CardInput {
 input ExpansionSetInput {
   name: String!
   icon: String
+  releaseDate: String
 }
 
 input SeriesInput {
   name: String!
   icon: String
+  releaseDate: String
 }
 
 type Mutation {
     createSeries(input: SeriesInput!): Series!
-    updateSeries(id: ID!, name: String!, icon: String): Series!
+    updateSeries(id: ID!, name: String!, icon: String, releaseDate: String): Series!
     deleteSeries(id: ID!): String!
 
     addExpansionSetToSeries(seriesId: ID!, input: ExpansionSetInput!): ExpansionSet!
-    updateExpansionSet(seriesId: ID!, expansionSetId: ID!, name: String!, icon: String): ExpansionSet!
+    updateExpansionSet(seriesId: ID!, expansionSetId: ID!, name: String!, icon: String, releaseDate: String): ExpansionSet!
     deleteExpansionSet(seriesId: ID!, expansionSetId: ID!): String!
 
     addCardToExpansionSet(seriesId: ID!, expansionSetId: ID!, input: CardInput!): Card!
