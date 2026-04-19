@@ -81,6 +81,29 @@ public class CardService {
         return card;
     }
 
+    public void toggleCollected(String seriesId,
+                                String expansionSetId,
+                                String cardId,
+                                Boolean collected) {
+
+        Series series = seriesRepository.findById(seriesId)
+                .orElseThrow(() -> new GraphQLExceptionHandler.SeriesNotFoundException(seriesId));
+
+        ExpansionSet expansionSet = series.getExpansionSets().stream()
+                .filter(es -> es.getId().equals(expansionSetId))
+                .findFirst()
+                .orElseThrow(() -> new GraphQLExceptionHandler.ExpansionSetNotFoundException(expansionSetId));
+
+        Card card = expansionSet.getCards().stream()
+                .filter(c -> c.getId().equals(cardId))
+                .findFirst()
+                .orElseThrow(() -> new GraphQLExceptionHandler.CardNotFoundException(cardId));
+
+        card.setCollected(collected != null && collected);
+
+        seriesRepository.save(series);
+    }
+
     public String deleteCard(String seriesId, String expansionSetId, String cardId) {
         Series series = seriesRepository.findById(seriesId)
                 .orElseThrow(() -> new GraphQLExceptionHandler.SeriesNotFoundException(seriesId));

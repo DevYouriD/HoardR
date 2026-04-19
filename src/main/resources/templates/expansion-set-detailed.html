@@ -46,8 +46,15 @@
 
                         <!-- Collected Checkbox -->
                         <div class="absolute top-2 right-2 w-6 h-6 flex items-center justify-center">
-                            <span th:if="${card.collected}" class="text-green-600 text-xl">✅</span>
-                            <input th:if="${!card.collected}" type="checkbox" disabled class="w-5 h-5 accent-gray-400 cursor-default"/>
+
+                            <form hx-post="/admin/card/toggle-collected" hx-trigger="change" hx-target="closest div" hx-swap="outerHTML">
+                                <input type="hidden" name="seriesId" th:value="${seriesId}"/>
+                                <input type="hidden" name="expansionSetId" th:value="${set.id}"/>
+                                <input type="hidden" name="cardId" th:value="${card.id}"/>
+                                <input type="hidden" name="collected" value="false"/>
+                                <input type="checkbox" name="collected" value="true" th:checked="${card.collected}" class="w-5 h-5 accent-green-600"/>
+                            </form>
+
                         </div>
 
                         <!-- Card face -->

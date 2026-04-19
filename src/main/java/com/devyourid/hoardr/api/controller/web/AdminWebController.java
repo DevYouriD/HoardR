@@ -156,6 +156,23 @@ public class AdminWebController {
         return "fragments/cards :: card-list";
     }
 
+    @PostMapping("/admin/card/toggle-collected")
+    public String toggleCollected(@RequestParam String seriesId,
+                                  @RequestParam String expansionSetId,
+                                  @RequestParam String cardId,
+                                  @RequestParam Boolean collected,
+                                  Model model) {
+
+        cardService.toggleCollected(seriesId, expansionSetId, cardId, collected);
+
+        ExpansionSet set = expansionSetService.findExpansionSetById(seriesId, expansionSetId);
+
+        model.addAttribute("seriesId", seriesId);
+        model.addAttribute("set", set);
+
+        return "fragments/cards :: card-list";
+    }
+
     @PostMapping(DELETE_CARD_PATH)
     public String deleteCard(@RequestParam String seriesId,
                              @RequestParam String expansionSetId,
