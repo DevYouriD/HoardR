@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org">
-<body>
-    <div th:fragment="card-list(seriesId, set)"
-         th:id="'card-list-' + ${set.id}"
-         class="space-y-2">
+    <body>
+        <div th:fragment="card-list(seriesId, set)"
+             th:id="'card-list-' + ${set.id}"
+             class="space-y-2">
 
-        <div th:each="card : ${set.cards}"
-             class="border p-2 rounded bg-white">
+            <div th:each="card : ${set.cards}" class="border p-2 rounded bg-white flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+                <div class="flex items-center gap-2">
+                    <img th:if="${card.face != null}" th:src="${card.face}" class="w-20 h-20 object-contain rounded" alt="card"/>
+                    <div>
+                        <strong th:text="${card.name}"></strong>
+                        <span class="text-sm text-gray-600">
+                            (<span th:text="${card.number}"></span>)
+                        </span>
+                    </div>
+                </div>
 
-            <strong th:text="${card.name}"></strong>
-            <span class="text-sm text-gray-600">
-                (<span th:text="${card.number}"></span>)
-            </span>
+                <div class="flex justify-end mt-2 space-x-2">
+                    <!-- Update -->
+                    <form
+                        th:hx-post="@{/admin/card/update}"
+                        th:hx-target="'#card-list-' + ${set.id}"
+                        hx-swap="outerHTML">
 
-            <div class="flex justify-end mt-2 space-x-2">
-                <!-- Update -->
-                <form
-                    th:hx-post="@{/admin/card/update}"
-                    th:hx-target="'#card-list-' + ${set.id}"
-                    hx-swap="outerHTML">
+                        <input type="hidden" name="seriesId" th:value="${seriesId}"/>
+                        <input type="hidden" name="expansionSetId" th:value="${set.id}"/>
+                        <input type="hidden" name="cardId" th:value="${card.id}"/>
 
-                    <input type="hidden" name="seriesId" th:value="${seriesId}"/>
-                    <input type="hidden" name="expansionSetId" th:value="${set.id}"/>
-                    <input type="hidden" name="cardId" th:value="${card.id}"/>
+                        <input name="name" th:value="${card.name}" placeholder="Card Name" class="border p-1 w-40"/>
+                        <input name="face" th:value="${card.face}" placeholder="Card Image URL" class="border p-1 w-56"/>
+                        <input name="number" th:value="${card.number}" placeholder="Number" class="border p-1 w-20"/>
+                        <input name="price" th:value="${card.price}" placeholder="Price" class="border p-1 w-24"/>
 
-                    <input name="name" th:value="${card.name}" placeholder="Card Name" class="border p-1 w-24"/>
-                    <input name="face" th:value="${card.face}" placeholder="Card Image URL" class="border p-1 w-32"/>
-                    <input name="number" th:value="${card.number}" placeholder="Number" class="border p-1 w-16"/>
-                    <input name="price" th:value="${card.price}" placeholder="Price" class="border p-1 w-16"/>
+                        <label class="text-sm">
+                            <input type="checkbox" name="collected" th:checked="${card.collected}"/>
+                            Collected
+                        </label>
 
-                    <label class="text-sm">
-                        <input type="checkbox" name="collected" th:checked="${card.collected}"/>
-                        Collected
-                    </label>
+                        <button class="bg-green-600 text-white px-2 py-1 rounded">
+                            Update
+                        </button>
+                    </form>
 
-                    <button class="bg-green-600 text-white px-2 py-1 rounded">
-                        Update
-                    </button>
-                </form>
+                    <!-- Delete -->
+                    <form
+                        th:hx-post="@{/admin/card/delete}"
+                        th:hx-target="'#card-list-' + ${set.id}"
+                        hx-swap="outerHTML">
 
-                <!-- Delete -->
-                <form
-                    th:hx-post="@{/admin/card/delete}"
-                    th:hx-target="'#card-list-' + ${set.id}"
-                    hx-swap="outerHTML">
+                        <input type="hidden" name="seriesId" th:value="${seriesId}"/>
+                        <input type="hidden" name="expansionSetId" th:value="${set.id}"/>
+                        <input type="hidden" name="cardId" th:value="${card.id}"/>
 
-                    <input type="hidden" name="seriesId" th:value="${seriesId}"/>
-                    <input type="hidden" name="expansionSetId" th:value="${set.id}"/>
-                    <input type="hidden" name="cardId" th:value="${card.id}"/>
-
-                    <button class="bg-red-600 text-white px-2 py-1 rounded">
-                        Delete
-                    </button>
-                </form>
+                        <button class="bg-red-600 text-white px-2 py-1 rounded">
+                            Delete
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
