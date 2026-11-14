@@ -12,7 +12,7 @@
 <body class="bg-white text-gray-900 min-h-screen flex flex-col">
 
 <!-- Header -->
-<div th:replace="~{fragments/header :: header('Cards')}"></div>
+<div th:replace="~{fragments/header :: header('Card Collection')}"></div>
 
 <!-- Main content -->
 <main class="flex-grow">
@@ -20,7 +20,7 @@
         <div class="container px-5 py-12 mx-auto">
 
             <div class="mb-8 text-center">
-                <h1 class="text-3xl font-bold mb-2">My Collection</h1>
+                <h1 class="text-3xl font-bold mb-2">Search Cards</h1>
 
                 <div class="text-lg text-gray-600">
                     <span th:text="${#lists.size(cards)}">0</span>
