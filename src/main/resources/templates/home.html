@@ -12,14 +12,37 @@
 <!-- Header -->
 <header class="bg-orange-800 text-orange-100 body-font py-4">
     <div class="container mx-auto px-5 flex items-center justify-between relative">
-        <!-- (empty) spacer aligned to left -->
-        <div class="w-6"></div>
+
+        <!-- Card search icon (left) -->
+        <a href="/cardsearch"
+           class="text-3xl hover:text-gray-200 transition-colors"
+           title="Search cards"
+           aria-label="Search cards">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="28"
+                 height="28"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.35-4.35"/>
+            </svg>
+        </a>
 
         <!-- Centered title -->
-        <a class="text-4xl font-bold text-center absolute left-1/2 transform -translate-x-1/2" href="/">Series</a>
+        <a class="text-4xl font-bold text-center absolute left-1/2 transform -translate-x-1/2"
+           href="/">
+            Series
+        </a>
 
-        <!-- Pencil icon aligned to right -->
-        <a href="/admin" class="text-3xl hover:text-gray-200">
+        <!-- Admin icon (right) -->
+        <a href="/admin"
+           class="text-3xl hover:text-gray-200 transition-colors"
+           title="Administration"
+           aria-label="Administration">
             ✎️
         </a>
     </div>

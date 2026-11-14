@@ -8,7 +8,10 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
+import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
+
+import java.util.List;
 
 @Controller
 @Getter @Setter
@@ -22,6 +25,15 @@ public class CardController {
     @MutationMapping
     public Card addCardToExpansionSet(@Argument String seriesId, @Argument String expansionSetId, @Argument("input") CardDto input) {
         return cardService.addCard(seriesId, expansionSetId, input);
+    }
+
+    // READ
+
+    // READ
+
+    @QueryMapping
+    public List<Card> findAllCards() {
+        return cardService.findAllCards();
     }
 
     // UPDATE

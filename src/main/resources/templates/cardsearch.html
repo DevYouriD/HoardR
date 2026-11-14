@@ -1,0 +1,86 @@
+
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cards - HoardR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" th:href="@{/snorlax_favicon.ico}" type="image/x-icon">
+</head>
+
+<body class="bg-white text-gray-900 min-h-screen flex flex-col">
+
+<!-- Header -->
+<header class="bg-orange-800 text-orange-100 body-font py-4">
+    <div class="container mx-auto px-5 flex items-center justify-between relative">
+
+        <!-- Search icon -->
+        <a href="/cards"
+           class="text-3xl hover:text-gray-200 transition-colors"
+           title="Cards">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="28" height="28"
+                 viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.35-4.35"/>
+            </svg>
+        </a>
+
+        <!-- Centered title -->
+        <a href="/"
+           class="text-4xl font-bold text-center absolute left-1/2 transform -translate-x-1/2">
+            Cards
+        </a>
+
+        <!-- Admin icon -->
+        <a href="/admin"
+           class="text-3xl hover:text-gray-200 transition-colors"
+           title="Administration">
+            ✎️
+        </a>
+
+    </div>
+</header>
+
+<!-- Main content -->
+<main class="flex-grow">
+    <section class="body-font">
+        <div class="container px-5 py-12 mx-auto">
+
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold mb-2">My Collection</h1>
+                <p class="text-gray-500">
+                    Browse all cards in your collection.
+                </p>
+            </div>
+
+            <!-- Card count -->
+            <div class="mb-6 text-sm text-gray-500">
+                <span th:text="${#lists.size(cards)}">0</span>
+                cards found
+            </div>
+
+            <!-- Card grid -->
+            <div th:replace="~{fragments/card-grid :: grid(${cards})}">
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-orange-800 text-orange-200 text-center text-sm py-4">
+    &copy; <span id="year"></span> DevYouriD. All rights reserved.
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

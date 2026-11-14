@@ -11,6 +11,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -19,6 +20,8 @@ import java.util.UUID;
 public class CardService {
 
     private final SeriesRepository seriesRepository;
+
+    // CREATE
 
     public Card addCard(String seriesId, String expansionSetId, CardDto input) {
         Series series = seriesRepository.findById(seriesId)
@@ -43,6 +46,18 @@ public class CardService {
 
         return card;
     }
+
+    // READ
+
+    public List<Card> findAllCards() {
+        return seriesRepository.findAll()
+                .stream()
+                .flatMap(series -> series.getExpansionSets().stream())
+                .flatMap(expansionSet -> expansionSet.getCards().stream())
+                .toList();
+    }
+
+    // UPDATE
 
     public Card updateCard(
             String seriesId,
@@ -80,6 +95,8 @@ public class CardService {
 
         return card;
     }
+
+    // DELETE
 
     public String deleteCard(String seriesId, String expansionSetId, String cardId) {
         Series series = seriesRepository.findById(seriesId)

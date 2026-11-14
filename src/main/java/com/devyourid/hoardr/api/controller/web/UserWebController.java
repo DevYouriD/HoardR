@@ -1,5 +1,6 @@
 package com.devyourid.hoardr.api.controller.web;
 
+import com.devyourid.hoardr.api.model.entity.Card;
 import com.devyourid.hoardr.api.model.entity.ExpansionSet;
 import com.devyourid.hoardr.api.model.entity.Series;
 import com.devyourid.hoardr.api.service.CardService;
@@ -15,9 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-import static com.devyourid.hoardr.api.utility.Paths.BASE_PATH;
-import static com.devyourid.hoardr.api.utility.Paths.GET_EXPANSION_SETS_DETAILS_PATH;
-import static com.devyourid.hoardr.api.utility.Paths.GET_SERIES_DETAILS_PATH;
+import static com.devyourid.hoardr.api.utility.Paths.*;
 
 @Controller
 @Getter @Setter
@@ -62,5 +61,14 @@ public class UserWebController {
         model.addAttribute("cards", set.getCards());
 
         return "expansion-set-detailed";
+    }
+
+    @GetMapping("/cardsearch")
+    public String getAllCards(Model model) {
+        List<Card> cards = cardService.findAllCards();
+
+        model.addAttribute("cards", cards);
+
+        return "cardsearch";
     }
 }
