@@ -11,9 +11,7 @@
     </head>
     <body class="bg-white text-gray-900 min-h-screen flex flex-col">
 
-        <header class="bg-orange-800 text-orange-100 py-4 text-center">
-            <a class="text-4xl font-bold" href="/">Admin Panel</a>
-        </header>
+        <div th:replace="~{fragments/header :: header('Admin Panel')}"></div>
 
         <main class="flex-grow container mx-auto px-5 py-10 space-y-10">
 

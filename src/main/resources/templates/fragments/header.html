@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<body>
+
+<header th:fragment="header(title)"
+        class="bg-orange-800 text-orange-100 body-font py-4">
+
+    <div class="container mx-auto px-5 flex items-center justify-between relative">
+
+        <!-- Card search icon (left) -->
+        <a href="/cardsearch"
+           class="text-3xl hover:text-gray-200 transition-colors"
+           title="Search cards"
+           aria-label="Search cards">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="28"
+                 height="28"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.35-4.35"/>
+            </svg>
+        </a>
+
+        <!-- Centered title -->
+        <h1 class="absolute left-1/2 -translate-x-1/2 text-center
+                   text-2xl sm:text-3xl md:text-4xl font-bold
+                   truncate max-w-[65%]">
+
+            <a href="/" th:text="${title}">
+                Page Title
+            </a>
+
+        </h1>
+
+        <!-- Admin icon (right) -->
+        <a href="/admin"
+           class="text-3xl hover:text-gray-200 transition-colors"
+           title="Administration"
+           aria-label="Administration">
+            ✎️
+        </a>
+
+    </div>
+
+</header>
+
+</body>
+</html>
