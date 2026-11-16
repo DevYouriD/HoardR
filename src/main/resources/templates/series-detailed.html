@@ -63,9 +63,7 @@
 </main>
 
 <!-- Footer -->
-<footer class="bg-orange-800 text-orange-200 text-center text-sm py-4">
-    &copy; <span id="year"></span> DevYouriD. All rights reserved.
-</footer>
+<div th:replace="~{fragments/footer :: footer}"></div>
 
 <script>
     document.getElementById("year").textContent = new Date().getFullYear();
