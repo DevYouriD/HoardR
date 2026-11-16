@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 
@@ -8,11 +9,11 @@
 
     <div class="container mx-auto px-5 flex items-center justify-between relative">
 
-        <!-- Card search icon (left) -->
-        <a href="/cardsearch"
+        <!-- Catalogue icon (left) -->
+        <a href="/catalogue"
            class="text-3xl hover:text-gray-200 transition-colors"
-           title="Search cards"
-           aria-label="Search cards">
+           title="Catalogue"
+           aria-label="Catalogue">
 
             <svg xmlns="http://www.w3.org/2000/svg"
                  width="28"
@@ -21,10 +22,10 @@
                  fill="none"
                  stroke="currentColor"
                  stroke-width="2"
-                 stroke-linecap="round"
-                 stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"/>
-                <path d="m21 21-4.35-4.35"/>
+                 stroke-linecap="round">
+                <path d="M12 21V7a2 2 0 0 1 2-2h7.4a.6.6 0 0 1 .6.6v13.114"/>
+                <path d="M12 21V7a2 2 0 0 0-2-2H2.6a.6.6 0 0 0-.6.6v13.114"/>
+                <path d="M14 19h8m-12 0H2"/>
             </svg>
         </a>
 
@@ -42,9 +43,22 @@
         <!-- Admin icon (right) -->
         <a href="/admin"
            class="text-3xl hover:text-gray-200 transition-colors"
-           title="Administration"
-           aria-label="Administration">
-            ✎️
+           title="Edit"
+           aria-label="Edit">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="28" height="28"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+                <path d="m18 5 1.4 1.4"/>
+                <path d="M20.4 3.6a2 2 0 0 1 0 2.8L9 17.8 4 19l1.2-5L16.6 3.6a2 2 0 0 1 2.8 0Z"/>
+                <path d="M8 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4"/>
+            </svg>
+
         </a>
 
     </div>

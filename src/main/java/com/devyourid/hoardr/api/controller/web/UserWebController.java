@@ -29,9 +29,9 @@ public class UserWebController {
 
     @GetMapping()
     public String home(Model model) {
-        List<Series> seriesList = seriesService.findAllSeries();
-        model.addAttribute("seriesList", seriesList);
-        return "home.html";
+        List<Card> cards = cardService.findAllCards();
+        model.addAttribute("cards", cards);
+        return "home";
     }
 
     @GetMapping(GET_SERIES_DETAILS_PATH)
@@ -63,12 +63,10 @@ public class UserWebController {
         return "expansion-set-detailed";
     }
 
-    @GetMapping("/cardsearch")
-    public String getAllCards(Model model) {
-        List<Card> cards = cardService.findAllCards();
-
-        model.addAttribute("cards", cards);
-
-        return "cardsearch";
+    @GetMapping("/catalogue")
+    public String catalogue(Model model) {
+        List<Series> seriesList = seriesService.findAllSeries();
+        model.addAttribute("seriesList", seriesList);
+        return "catalogue";
     }
 }
